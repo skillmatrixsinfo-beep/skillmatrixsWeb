@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Leadership — SkillMatrixs</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#0b57b3;
+      --accent:#00b4d8;
+      --bg:#f6f9ff;
+      --muted:#6c7a89;
+      --card-shadow: 0 12px 30px rgba(11,99,214,0.06);
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+      background:var(--bg);
+      color:#12263f;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* Navbar (same style as index/about) */
+    .navbar{
+      background: linear-gradient(90deg, rgba(6,40,82,0.98), rgba(11,87,179,0.95));
+      box-shadow: 0 8px 30px rgba(2,6,23,0.08);
+    }
+    .navbar-brand{ color:#fff !important; font-weight:800; }
+    .nav-link{ color:rgba(255,255,255,0.92) !important; font-weight:600; }
+
+    /* Page hero */
+    .hero {
+      background: linear-gradient(135deg,#0b57b3,#00b4d8);
+      color:#fff;
+      padding:2.4rem 0;
+      border-bottom-left-radius:18px;
+      border-bottom-right-radius:18px;
+      margin-bottom:1.6rem;
+    }
+    .hero h1{ font-size:1.6rem; font-weight:800; margin-bottom:.25rem; }
+    .hero p.lead{ opacity:.95; margin-bottom:0; }
+
+    /* Leadership grid */
+    .leader-card{
+      background:#fff;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:var(--card-shadow);
+      transition: transform .25s, box-shadow .25s;
+      display:flex;
+      flex-direction:column;
+      height:100%;
+    }
+    .leader-card:hover{ transform: translateY(-6px); box-shadow: 0 30px 60px rgba(10,30,90,0.08); }
+
+    .leader-photo{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+      display:block;
+    }
+    .leader-body{
+      padding:1rem 1rem 1.25rem;
+      display:flex;
+      flex-direction:column;
+      gap:.6rem;
+      flex:1 1 auto;
+    }
+    .leader-name{ font-weight:800; color:var(--primary); margin-bottom:0; }
+    .leader-role{ color:var(--muted); font-weight:600; font-size:.95rem; }
+
+    .skills-list{ display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.5rem; }
+    .chip{ background:#f1f6ff; color:var(--primary); padding:.28rem .55rem; border-radius:999px; font-weight:600; font-size:.82rem; }
+
+    .contact-cta{ margin-top:1rem; display:flex; gap:.6rem; }
+
+    footer.site-footer{
+      background: linear-gradient(90deg,#042a5b,#062a4f);
+      color:#fff; padding:2rem 0; margin-top:2.2rem; text-align:center;
+      border-top-left-radius:8px; border-top-right-radius:8px;
+    }
+
+    @media (max-width:767px){
+      .leader-photo{ height:200px; }
+      .hero { text-align:center; }
+    }
+  </style>
+</head>
+<body>
+
+      <!-- NAVBAR (professional feel + right-side actions) -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">SkillMatrixs</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse"
+              aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="about.html">About SkillMatrixs</a></li>
+              <li><a class="dropdown-item" href="leadership.html">Leadership</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="our-story.html">Our Story</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="#courses">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link" href="staffing.html">Staffing</a></li>
+          <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Resources
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+              <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+              <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+              <li><a class="dropdown-item" href="terms.html">Terms & Privacy</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- right side actions -->
+        <div class="d-flex align-items-center gap-2 nav-actions">
+          <a id="lmsBtn" class="btn btn-lms btn-sm" href="#" role="button" title="Open LMS Portal">
+            <i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i> LMS Portal
+          </a>
+          <a class="btn btn-outline-light btn-sm" href="contact.html"><i class="bi bi-envelope-fill" aria-hidden="true"></i> Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9">
+          <h1>Leadership & Mentors</h1>
+          <p class="lead">Meet the team — industry practitioners, architects and trainers shaping real-world curriculum.</p>
+        </div>
+        <div class="col-lg-3 text-lg-end d-none d-lg-block">
+          <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="document.getElementById('studentCourse').value='Full Stack Development with AI Skills'">Request a Session</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- LEADERSHIP GRID -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Card: Bala's -->
+        <div class="col-lg-4 col-md-6">
+          <article class="leader-card" aria-labelledby="lead1-name">
+            <img class="leader-photo" src="/images/bala.png" alt="Photo of Bala's — Lead Trainer">
+            <div class="leader-body">
+              <h3 id="lead1-name" class="leader-name">Bala's'</h3>
+              <div class="leader-role">Lead Trainer & Full Stack Architect</div>
+
+              <p class="small text-muted mb-0">
+                10+ years building enterprise web apps and microservices. Expert in Angular, RxJS, Spring Boot, Java, and applying AI in developer workflows.
+              </p>
+
+              <div class="skills-list" aria-hidden="true">
+                <span class="chip">Angular</span>
+                <span class="chip">Spring Boot</span>
+                <span class="chip">Microservices</span>
+                <span class="chip">AI Integration</span>
+              </div>
+
+              <div class="contact-cta">
+                <a class="btn btn-outline-primary btn-sm" href="mailto:training@skillmatrixs.com?subject=Mentor%20-%20Avinash">Contact</a>
+                <a class="btn btn-primary btn-sm" href="fullstack-ai.html">View Course</a>
+              </div>
+
+              <div class="mt-2 small text-muted">LinkedIn:
+                <a href="#" aria-label="Avinash's LinkedIn" class="ms-1">/in/bala</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card: Curriculum Head -->
+        <div class="col-lg-4 col-md-6">
+          <article class="leader-card" aria-labelledby="lead2-name">
+            <img class="leader-photo" src="/images/karishma.png" alt="Photo of Curriculum Head">
+            <div class="leader-body">
+              <h3 id="lead2-name" class="leader-name">Karishma — Curriculum Head</h3>
+              <div class="leader-role">Curriculum & Mentorship Lead</div>
+
+              <p class="small text-muted mb-0">
+                Designs learning paths, assessment strategies and industry-aligned projects. Former software engineer and corporate trainer.
+              </p>
+
+              <div class="skills-list" aria-hidden="true">
+                <span class="chip">Instructional Design</span>
+                <span class="chip">Project-based Learning</span>
+                <span class="chip">Student Assessment</span>
+              </div>
+
+              <div class="contact-cta">
+                <a class="btn btn-outline-primary btn-sm" href="mailto:curriculum@skillmatrixs.com">Contact</a>
+                <a class="btn btn-primary btn-sm" href="about.html">About Us</a>
+              </div>
+
+              <div class="mt-2 small text-muted">LinkedIn:
+                <a href="#" aria-label="Priya's LinkedIn" class="ms-1">/in/rajesh</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card: Senior Mentor / Industry Advisor -->
+        <div class="col-lg-4 col-md-6">
+          <article class="leader-card" aria-labelledby="lead3-name">
+            <img class="leader-photo" src="/images/rajesh.png" alt="Photo of Industry Advisor">
+            <div class="leader-body">
+              <h3 id="lead3-name" class="leader-name">Rajesh — Industry Advisor</h3>
+              <div class="leader-role">Senior Engineering Advisor</div>
+
+              <p class="small text-muted mb-0">
+                Ex-CTO and startup operator advising on product architecture, cloud adoption, and career readiness for graduates.
+              </p>
+
+              <div class="skills-list" aria-hidden="true">
+                <span class="chip">Architecture</span>
+                <span class="chip">Cloud</span>
+                <span class="chip">Hiring</span>
+              </div>
+
+              <div class="contact-cta">
+                <a class="btn btn-outline-primary btn-sm" href="mailto:advisor@skillmatrixs.com">Contact</a>
+                <a class="btn btn-primary btn-sm" href="contact.html">Request Advisory</a>
+              </div>
+
+              <div class="mt-2 small text-muted">LinkedIn:
+                <a href="#" aria-label="Ravi's LinkedIn" class="ms-1">/in/rajesh</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card: Mentors Grid (smaller cards) -->
+        <div class="col-12">
+          <div class="mt-4 p-3 bg-white rounded shadow-sm">
+            <h4 class="fw-bold">Mentors & Trainers</h4>
+            <p class="text-muted">A rotating team of senior engineers and subject matter experts — each session includes live mentoring, code reviews and career guidance.</p>
+
+            <div class="row g-3">
+              <div class="col-sm-6 col-md-3">
+                <div class="p-3 border rounded text-center">
+                  <img src="/images/mentor1.png" alt="Mentor 1" style="width:80px;height:80px;object-fit:cover;border-radius:12px;margin-bottom:.6rem;">
+                  <div class="small fw-bold">Anu S</div>
+                  <div class="small text-muted">Frontend</div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-3">
+                <div class="p-3 border rounded text-center">
+                  <img src="/images/mentor2.png" alt="Mentor 2" style="width:80px;height:80px;object-fit:cover;border-radius:12px;margin-bottom:.6rem;">
+                  <div class="small fw-bold">Sameer P</div>
+                  <div class="small text-muted">Backend</div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-3">
+                <div class="p-3 border rounded text-center">
+                  <img src="/images/metor3.png" alt="Mentor 3" style="width:80px;height:80px;object-fit:cover;border-radius:12px;margin-bottom:.6rem;">
+                  <div class="small fw-bold">Megha T</div>
+                  <div class="small text-muted">AI & Data</div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-3">
+                <div class="p-3 border rounded text-center">
+                  <img src="images/metor4.png" alt="Mentor 4" style="width:80px;height:80px;object-fit:cover;border-radius:12px;margin-bottom:.6rem;">
+                  <div class="small fw-bold">Vikram R</div>
+                  <div class="small text-muted">DevOps</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- /row -->
+    </div>
+  </main>
+
+  <!-- CTA strip -->
+  <section class="py-4 bg-white border-top">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <div>
+        <h5 class="mb-0">Want to bring these mentors to your organization?</h5>
+        <p class="small text-muted mb-0">Corporate training, workshops and bespoke bootcamps available.</p>
+      </div>
+      <div>
+        <a class="btn btn-primary me-2" href="contact.html">Request Training</a>
+        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#enrollModal">Book a Seat</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="mb-1">© <span id="copyright-year"></span> SkillMatrixs — Where Creativity Meets Code.</p>
+      <small class="text-muted">Designed with ♥ for practical learning.</small>
+    </div>
+  </footer>
+
+  <!-- ENROLLMENT MODAL & hidden iframe (same pattern used on other pages) -->
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+  <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form id="enrollForm" target="hidden_iframe" method="POST" action="GOOGLE_FORM_ACTION_URL" novalidate>
+          <div class="modal-header">
+            <h5 class="modal-title" id="enrollModalLabel">Course Enrollment — SkillMatrixs</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <p class="small text-muted">Fill in the form below and we'll contact you with next steps.</p>
+
+            <div class="mb-3">
+              <label for="studentName" class="form-label">Full name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="studentName" name="studentName" required maxlength="100" />
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentEmail" class="form-label">Email <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="studentEmail" name="studentEmail" required maxlength="100" />
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentPhone" class="form-label">Phone <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="studentPhone" name="studentPhone" pattern="[\d\s+()-]{6,20}" required maxlength="20" />
+              <div class="invalid-feedback">Please enter your phone number.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentCourse" class="form-label">Select Course <span class="text-danger">*</span></label>
+              <select id="studentCourse" name="studentCourse" class="form-select" required>
+                <option value="">Choose a course...</option>
+                <option>Full Stack Development with AI Skills</option>
+                <option>45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → Node.js → MySQL)</option>
+                <option>45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → SpringBoot → MySQL)</option>
+                <option>AI Skills</option>
+              </select>
+              <div class="invalid-feedback">Please select a course.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentMessage" class="form-label">Message (optional)</label>
+              <textarea id="studentMessage" name="studentMessage" class="form-control" rows="3" maxlength="800"></textarea>
+            </div>
+
+            <div id="googleFormFieldsContainer"></div>
+            <div id="enrollAlert" class="alert d-none mt-2" role="alert"></div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button id="submitEnrollBtn" type="submit" class="btn btn-primary">Submit Enrollment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // dynamic year
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+    /* Enrollment form script (same pattern used across site)
+       Replace GOOGLE_FORM_ACTION_URL and entry IDs with your Google Form values */
+    (function () {
+      const GOOGLE_FORM_ACTION_URL = 'GOOGLE_FORM_ACTION_URL'; // e.g. https://docs.google.com/forms/d/e/FORM_ID/formResponse
+      const hiddenInputNames = {
+        name: 'entry.1111111111',
+        email: 'entry.2222222222',
+        phone: 'entry.3333333333',
+        course: 'entry.4444444444',
+        message: 'entry.5555555555'
+      };
+
+      const enrollForm = document.getElementById('enrollForm');
+      const googleFieldsContainer = document.getElementById('googleFormFieldsContainer');
+      const enrollAlert = document.getElementById('enrollAlert');
+      const submitBtn = document.getElementById('submitEnrollBtn');
+
+      if (GOOGLE_FORM_ACTION_URL && GOOGLE_FORM_ACTION_URL !== 'GOOGLE_FORM_ACTION_URL') {
+        enrollForm.action = GOOGLE_FORM_ACTION_URL;
+      } else {
+        console.info('Reminder: replace GOOGLE_FORM_ACTION_URL with your Google Form action URL.');
+      }
+
+      function createHiddenInputs() {
+        googleFieldsContainer.innerHTML = '';
+        for (const key in hiddenInputNames) {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = hiddenInputNames[key];
+          input.id = 'gf_' + key;
+          googleFieldsContainer.appendChild(input);
+        }
+      }
+      createHiddenInputs();
+
+      enrollForm.addEventListener('submit', function (e) {
+        e.preventDefault(); e.stopPropagation();
+        enrollAlert.classList.add('d-none'); enrollAlert.classList.remove('alert-success', 'alert-danger');
+
+        if (!enrollForm.checkValidity()) { enrollForm.classList.add('was-validated'); return; }
+
+        const values = {
+          name: document.getElementById('studentName').value.trim(),
+          email: document.getElementById('studentEmail').value.trim(),
+          phone: document.getElementById('studentPhone').value.trim(),
+          course: document.getElementById('studentCourse').value,
+          message: document.getElementById('studentMessage').value.trim()
+        };
+
+        for (const key in values) {
+          const hidden = document.getElementById('gf_' + key);
+          if (hidden) hidden.value = values[key];
+        }
+
+        submitBtn.disabled = true; submitBtn.innerHTML = 'Submitting...';
+        enrollForm.submit();
+
+        setTimeout(function () {
+          enrollAlert.classList.remove('d-none'); enrollAlert.classList.add('alert-success');
+          enrollAlert.innerHTML = 'Thank you! Your enrollment request has been submitted. We will contact you soon.';
+          enrollForm.reset(); enrollForm.classList.remove('was-validated'); submitBtn.disabled = false; submitBtn.innerHTML = 'Submit Enrollment';
+          setTimeout(function () {
+            const modalEl = document.getElementById('enrollModal'); const modal = bootstrap.Modal.getInstance(modalEl); if (modal) modal.hide();
+          }, 900);
+        }, 900);
+      });
+
+      // dev reminder
+      (function devCheck() {
+        const missingEntry = Object.values(hiddenInputNames).some(v => typeof v === 'string' && v.startsWith('entry.') && v.length < 12);
+        if (missingEntry || GOOGLE_FORM_ACTION_URL === 'GOOGLE_FORM_ACTION_URL') {
+          console.info('Reminder: Replace GOOGLE_FORM_ACTION_URL and the entry IDs in the enrollment script with your Google Form values.');
+        }
+      })();
+    })();
+  </script>
+</body>
+</html>

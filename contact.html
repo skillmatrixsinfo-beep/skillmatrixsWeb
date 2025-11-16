@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
 </head>
 <body>
 
-  <!-- NAVBAR (professional feel + right-side actions) -->
+    <!-- NAVBAR (professional feel + right-side actions) -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">SkillMatrixs</a>
@@ -87,166 +88,32 @@
     </div>
   </header>
 
-  <!-- COURSES -->
-  <main class="py-5">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-end mb-3">
-        <h2 class="section-title" data-aos="fade-up">Programs — Present & Upcoming</h2>
-        <small class="text-muted">Project-based cohorts with live mentoring</small>
-      </div>
+<!-- contact.html -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="mb-3">Contact Us</h2>
+    <p class="text-muted">Have a question, want to enroll, or need corporate training? Reach out below.</p>
 
-      <div class="row g-4">
-        <!-- Card 1: Present -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="40">
-          <div class="course-card">
-            <div class="course-media" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=60');">
-              <span class="course-badge badge-present">Present Batch</span>
-            </div>
-
-            <div class="course-body">
-              <h3 class="course-title">Full Stack Development with AI Skills</h3>
-              <div class="course-meta">Angular • Spring Boot • MySQL • AI integration</div>
-              <p class="small text-muted mb-2">End-to-end full-stack training combined with hands-on AI features: RAG, prompts, and model integrations.</p>
-
-              <div class="course-actions">
-                <a class="btn btn-outline-primary btn-sm" href="fullstack-ai.html">View details</a>
-                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="document.getElementById('studentCourse').value='Full Stack Development with AI Skills'">Enroll</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2: Upcoming Node -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="80">
-          <div class="course-card">
-            <div class="course-media" style="background-image:url('https://images.unsplash.com/photo-1526378721064-84d45b90a7d0?auto=format&fit=crop&w=1200&q=60');">
-              <span class="course-badge badge-upcoming">Upcoming</span>
-            </div>
-
-            <div class="course-body">
-              <h3 class="course-title">45-Day Full-Stack (Angular → Node.js → MySQL)</h3>
-              <div class="course-meta">HTML5 • CSS3 • JavaScript • Node.js</div>
-              <p class="small text-muted mb-2">Fast-track bootcamp: build a capstone app using Angular frontend and Node.js backend with MySQL.</p>
-
-              <div class="course-actions">
-                <a class="btn btn-outline-primary btn-sm" href="45-fullstack-node.html">View details</a>
-                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="document.getElementById('studentCourse').value='45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → Node.js → MySQL)'">Enroll</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3: Upcoming Spring Boot -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="120">
-          <div class="course-card">
-            <div class="course-media" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=60');">
-              <span class="course-badge badge-upcoming">Upcoming</span>
-            </div>
-
-            <div class="course-body">
-              <h3 class="course-title">45-Day Full-Stack (Angular → SpringBoot → MySQL)</h3>
-              <div class="course-meta">Enterprise-focused • REST • Security basics</div>
-              <p class="small text-muted mb-2">Build secure REST APIs with Spring Boot and integrate them with a modern Angular frontend.</p>
-
-              <div class="course-actions">
-                <a class="btn btn-outline-primary btn-sm" href="45-fullstack-sb.html">View details</a>
-                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="document.getElementById('studentCourse').value='45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → SpringBoot → MySQL)'">Enroll</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4: Upcoming AI -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="160">
-          <div class="course-card">
-            <div class="course-media" style="background-image:url('https://images.unsplash.com/photo-1531497865143-3d50b6e2baf8?auto=format&fit=crop&w=1200&q=60');">
-              <span class="course-badge badge-upcoming">Upcoming</span>
-            </div>
-
-            <div class="course-body">
-              <h3 class="course-title">AI Skills — Generative & Agentic AI</h3>
-              <div class="course-meta">Generative AI • Agents • RAG</div>
-              <p class="small text-muted mb-2">A focused module on generative models, RAG pipelines, agentic systems and production concerns.</p>
-
-              <div class="course-actions">
-                <a class="btn btn-outline-primary btn-sm" href="ai-skills.html">View details</a>
-                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="document.getElementById('studentCourse').value='AI Skills'">Enroll</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div> <!-- /row -->
-    </div>
-  </main>
-
-  <!-- TRAINER (kept simple) -->
-  <section id="trainer" class="py-5 bg-white">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">About the Trainer</h2>
-      <div class="row align-items-center gy-4">
-        <div class="col-md-3 text-center" data-aos="zoom-in" data-aos-delay="50">
-          <img src="/images/software-trainer.jpg" alt="Trainer" class="img-fluid rounded-3" style="box-shadow:var(--card-shadow);">
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-delay="100">
-          <h4 class="fw-bold">Bala / Avinash Konduri</h4>
-          <p class="text-muted">Experienced software developer & corporate trainer with 9+ years across Angular, RxJS, Spring Boot, Java microservices, and AI. Focused on project-based learning and real-world problem solving.</p>
-          <div class="d-flex gap-2">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal">Register for Course</button>
-            <a href="contact.html" class="btn btn-outline-primary">Contact</a>
-          </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card p-4">
+          <p><strong>Email:</strong> skillmatrixsinfo@gmail.com</p>
+          <p><strong>Phone:</strong> +91 98765 43210</p>
+          <p><strong>Location:</strong> Hyderabad, India</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- CERTIFICATES -->
-  <section id="certificates" class="py-5">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Certificate Samples</h2>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <img src="/images/certificates.png" alt="Certificate sample" class="img-fluid rounded-3 shadow-sm">
-        </div>
-        <div class="col-md-6">
-          <img src="/images/certificates.png" alt="Certificate sample" class="img-fluid rounded-3 shadow-sm">
-        </div>
+      <div class="col-md-6">
+        <form action="mailto:skillmatrixsinfo@gmail.com" method="post" enctype="text/plain">
+          <div class="mb-3"><input class="form-control" name="name" placeholder="Your name" required></div>
+          <div class="mb-3"><input class="form-control" name="email" placeholder="Your email" required></div>
+          <div class="mb-3"><textarea class="form-control" name="message" rows="5" placeholder="How can we help?" required></textarea></div>
+          <button class="btn btn-primary">Send</button>
+        </form>
       </div>
     </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Contact & Payment Info</h2>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card p-4">
-            <h5>Get in touch</h5>
-            <p class="text-muted">Have questions or want to enroll? Reach out and we'll respond within one business day.</p>
-            <p class="mb-1"><i class="bi bi-envelope-fill"></i> <strong>Email:</strong> skillmatrixsinfo@gmail.com</p>
-            <p class="mb-1"><i class="bi bi-telephone-fill"></i> <strong>Phone:</strong> +91 00000 00000</p>
-            <p><i class="bi bi-geo-alt-fill"></i> Hyderabad, India</p>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card p-4">
-            <h5>Payment Options</h5>
-            <p class="text-muted mb-2">Quick payments via popular UPI and bank transfer (details provided on request).</p>
-            <ul class="list-unstyled mb-0">
-              <li><strong>UPI (GPay/PhonePe/Paytm):</strong> <code>0000000000@upi</code></li>
-              <li class="mt-2"><strong>Bank Transfer:</strong> SkillMatrixs Training Services</li>
-            </ul>
-            <div class="mt-3">
-              <button class="btn btn-outline-primary btn-sm">Show UPI QR</button>
-              <button class="btn btn-primary btn-sm ms-2">Request Invoice</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
   <!-- FOOTER -->
   <footer class="site-footer">
