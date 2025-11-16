@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkillMatrixs — Where Creativity Meets Code.</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary:#004aad;
+      --accent:#00b4d8;
+      --bg:#f6f9ff;
+      --text:#12263f;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg,var(--primary),#0466c8);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
+    .navbar-brand { font-weight:700; color:#fff!important; }
+    .nav-link { color:#fff!important; font-weight:500; }
+
+    /* Hero */
+    header.hero {
+      padding:6rem 0;
+      text-align:center;
+      background: linear-gradient(135deg, rgba(0,74,173,0.95), rgba(0,180,216,0.9));
+      color:#fff;
+    }
+    header.hero h1 {
+      font-weight:800;
+      font-size:clamp(2rem,4vw,3.2rem);
+      margin-bottom:.5rem;
+    }
+    header.hero p.lead {
+      font-size:1.1rem;
+      opacity:0.9;
+      margin-bottom:2rem;
+    }
+
+    /* Section Titles */
+    .section-title {
+      text-align:center;
+      color:var(--primary);
+      font-weight:700;
+      margin-bottom:2.5rem;
+    }
+
+    /* Cards */
+    .card {
+      border:none;
+      border-radius:15px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      transition:transform .3s;
+    }
+    .card:hover { transform:translateY(-5px); }
+
+    .icon-circle {
+      width:80px;height:80px;border-radius:16px;
+      display:grid;place-items:center;
+      font-size:2rem;
+      background:linear-gradient(135deg,rgba(0,74,173,0.1),rgba(0,180,216,0.1));
+      color:var(--primary);
+      margin-bottom:1rem;
+    }
+
+    .trainer-img {
+      width:240px;height:240px;object-fit:cover;border-radius:50%;
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .certificate-img {
+      width:100%;
+      border-radius:12px;
+      box-shadow:0 8px 22px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      background:var(--primary);
+      color:#fff;
+      text-align:center;
+      padding:2rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">SkillMatrixs</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="nav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#trainer">Trainer</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <div data-aos="fade-down" data-aos-duration="800">
+        <h1>SkillMatrixs</h1>
+        <p class="lead">Where Creativity Meets Code.</p>
+        <a href="#courses" class="btn btn-light btn-lg shadow">Explore Courses</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Courses -->
+  <section id="courses" class="py-5">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Courses Offered</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card p-4 text-center">
+            <div class="icon-circle"><i class="bi bi-code-slash"></i></div>
+            <h5>Full Stack Web Development</h5>
+            <p>Master Angular, Node.js, and Spring Boot with live projects.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card p-4 text-center">
+            <div class="icon-circle"><i class="bi bi-robot"></i></div>
+            <h5>AI & Machine Learning</h5>
+            <p>Learn Python, TensorFlow, and real-world ML applications.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card p-4 text-center">
+            <div class="icon-circle"><i class="bi bi-phone"></i></div>
+            <h5>Mobile App Development</h5>
+            <p>Create Android & Ionic apps with sleek UI and backend integration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainer -->
+  <section id="trainer" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">About the Trainer</h2>
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center" data-aos="zoom-in">
+          <img src="https://via.placeholder.com/240" alt="Trainer" class="trainer-img">
+        </div>
+        <div class="col-md-8" data-aos="fade-left">
+          <h4 class="fw-bold">Bala / Avinash Konduri</h4>
+          <p>With 9+ years of expertise in Angular, RxJS, Java microservices, and AI, Bala is a passionate trainer focusing on real-time, project-based learning that bridges creativity and code.</p>
+          <ul>
+            <li>Full Stack & Corporate Trainer</li>
+            <li>YouTube Channel: <strong>AI Studio Chronicles</strong></li>
+            <li>Guides students through hands-on enterprise projects</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates" class="py-5">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Certificate Samples</h2>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-right">
+          <img src="https://via.placeholder.com/800x500?text=Course+Completion+Certificate" class="certificate-img" alt="">
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <img src="https://via.placeholder.com/800x500?text=Participation+Certificate" class="certificate-img" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Contact & Payment Info</h2>
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-right">
+          <p><i class="bi bi-envelope-fill text-primary"></i> training@skillmatrixs.com</p>
+          <p><i class="bi bi-telephone-fill text-primary"></i> +91 98765 43210</p>
+          <p><i class="bi bi-geo-alt-fill text-primary"></i> Hyderabad, India</p>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <p>Payments accepted via:</p>
+          <ul>
+            <li>Google Pay / PhonePe / Paytm — <strong>+91 98765 43210</strong></li>
+            <li>Bank Transfer — <strong>SkillMatrixs Training Services</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> SkillMatrixs — Where Creativity Meets Code.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration:800, easing:'ease-out-cubic', once:true });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

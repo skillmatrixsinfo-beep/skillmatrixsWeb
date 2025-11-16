@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkillMatrixs — Where Creativity Meets Code.</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    :root { --primary:#004aad; --accent:#00b4d8; --bg:#f6f9ff; --text:#12263f; }
+    *{box-sizing:border-box}
+    body { font-family: "Poppins", sans-serif; background: var(--bg); color: var(--text); scroll-behavior: smooth; }
+
+    /* Navbar */
+    .navbar { background: linear-gradient(90deg,var(--primary),#0466c8); box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+    .navbar-brand { font-weight:700; color:#fff!important; }
+    .nav-link { color:#fff!important; font-weight:500; }
+
+    /* Hero */
+    header.hero { padding:6rem 0; text-align:center; background: linear-gradient(135deg, rgba(0,74,173,0.95), rgba(0,180,216,0.9)); color:#fff; }
+    header.hero h1 { font-weight:800; font-size:clamp(2rem,4vw,3.2rem); margin-bottom:.5rem; }
+    header.hero p.lead { font-size:1.05rem; opacity:0.95; margin-bottom:1.4rem; }
+
+    .section-title { text-align:center; color:var(--primary); font-weight:700; margin-bottom:2.25rem; }
+
+    .card { border:none; border-radius:14px; box-shadow:0 8px 28px rgba(17,24,39,0.06); transition: transform .35s, box-shadow .35s; }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 18px 45px rgba(17,24,39,0.09); }
+
+    .icon-circle { width:80px;height:80px;border-radius:16px; display:inline-grid;place-items:center;font-size:2rem; background: linear-gradient(135deg, rgba(11,99,214,0.12), rgba(0,180,216,0.08)); color:var(--primary); margin-bottom:1rem; }
+
+    .trainer-img { width:240px;height:240px;object-fit:cover;border-radius:22px; box-shadow: 0 12px 38px rgba(11,99,214,0.12); }
+    .certificate-img { width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(2,6,23,0.08); border: 1px solid rgba(2,6,23,0.04); }
+
+    footer.site-footer{ background: linear-gradient(90deg,#042a5b,#062a4f); color:#fff; padding:2.2rem 0; margin-top:2.5rem; text-align:center; }
+
+    .course-link { text-decoration: none; color: inherit; display: block; height:100%; }
+    .badge-batch { font-weight:600; }
+
+    @media (max-width:767px){
+      .trainer-img{ width:180px;height:180px;border-radius:16px; }
+      .icon-circle{ width:64px;height:64px;border-radius:12px; font-size:1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">SkillMatrixs</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse" aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navCollapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#trainer">Trainer</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div data-aos="fade-down" data-aos-duration="800">
+        <h1>SkillMatrixs</h1>
+        <p class="lead">Where Creativity Meets Code.</p>
+
+        <div class="d-flex justify-content-center gap-3 mt-4">
+          <a href="#courses" class="btn btn-light btn-lg shadow-sm">Explore Courses</a>
+          <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#enrollModal">Register for Course</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- COURSES -->
+  <section id="courses" class="py-5">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Courses Offered</h2>
+
+      <div class="row g-4">
+
+        <!-- Present Batch -->
+        <div class="col-12">
+          <h4 class="mb-3">Present Batch</h4>
+        </div>
+
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+          <a class="course-link" href="fullstack-ai.html">
+            <div class="card p-4 h-100">
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <div class="icon-circle"><i class="bi bi-stack"></i></div>
+                <div>
+                  <h5 class="mb-1">Full Stack Development with AI Skills</h5>
+                  <small class="text-muted">Core → Advanced → Spring Boot → MySQL → Angular + AI integration</small>
+                  <p class="mb-1 text-muted">Frontend with Angular, backend with Spring Boot & MySQL, plus hands-on AI integration and productivity workflows.</p>
+                  <span class="badge bg-success badge-batch">Present Batch</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Upcoming Batch list title -->
+        <div class="col-12 mt-4">
+          <h4 class="mb-3">Upcoming Batches</h4>
+        </div>
+
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="110">
+          <a class="course-link" href="45-fullstack-node.html">
+            <div class="card p-4 h-100">
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <div class="icon-circle"><i class="bi bi-clock-history"></i></div>
+                <div>
+                  <h5 class="mb-1">45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → Node.js → MySQL)</h5>
+                  <small class="text-muted">Node.js + MySQL fast-track</small>
+                  <p class="mb-1 text-muted">Intensive 45-day bootcamp with daily hands-on tasks and a capstone project.</p>
+                  <span class="badge bg-warning text-dark badge-batch">Upcoming</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="170">
+          <a class="course-link" href="45-fullstack-sb.html">
+            <div class="card p-4 h-100">
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <div class="icon-circle"><i class="bi bi-building"></i></div>
+                <div>
+                  <h5 class="mb-1">45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → SpringBoot → MySQL)</h5>
+                  <small class="text-muted">Spring Boot + Angular enterprise</small>
+                  <p class="mb-1 text-muted">Enterprise-focused 45-day cohort — REST APIs, security basics and deployable app architecture.</p>
+                  <span class="badge bg-warning text-dark badge-batch">Upcoming</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="230">
+          <a class="course-link" href="ai-skills.html">
+            <div class="card p-4 h-100">
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <div class="icon-circle"><i class="bi bi-brain"></i></div>
+                <div>
+                  <h5 class="mb-1">AI Skills</h5>
+                  <small class="text-muted">Generative AI • Agentic AI • AI Agents • RAG</small>
+                  <p class="mb-1 text-muted">Focused AI module covering generative models, agentic systems, RAG pipelines and practical integrations.</p>
+                  <span class="badge bg-warning text-dark badge-batch">Upcoming</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div> <!-- /row -->
+    </div>
+  </section>
+
+  <!-- TRAINER -->
+  <section id="trainer" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">About the Trainer</h2>
+
+      <div class="row align-items-center g-4">
+        <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="80">
+          <img src="https://via.placeholder.com/420x420.png?text=Trainer" alt="Trainer" class="trainer-img img-fluid">
+        </div>
+
+        <div class="col-md-8" data-aos="fade-left" data-aos-delay="140">
+          <h4 class="fw-bold">Bala / Avinash Konduri</h4>
+          <p class="text-muted">Experienced software developer & corporate trainer with 9+ years across Angular, RxJS, Spring Boot, Java microservices, and AI. Focused on project-based learning and real-world problem solving.</p>
+
+          <div class="row gy-2">
+            <div class="col-sm-6">
+              <ul class="list-unstyled">
+                <li><strong>•</strong> Full Stack (Angular • Node • Spring)</li>
+                <li><strong>•</strong> Corporate training & bootcamps</li>
+                <li><strong>•</strong> YouTube: <em>AI Studio Chronicles</em></li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#enrollModal">Register for Course</button>
+              <a href="#certificates" class="btn btn-outline-primary ms-2 mt-2">View Certificates</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="py-5">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Certificate Samples</h2>
+
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-right" data-aos-delay="60">
+          <img src="https://via.placeholder.com/900x600.png?text=Course+Completion+Certificate" alt="Certificate sample" class="certificate-img">
+        </div>
+        <div class="col-md-6" data-aos="fade-left" data-aos-delay="120">
+          <img src="https://via.placeholder.com/900x600.png?text=Participation+Certificate" alt="Certificate sample" class="certificate-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Contact & Payment Info</h2>
+
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="60">
+          <div class="card p-4">
+            <h5>Get in touch</h5>
+            <p class="text-muted">Have questions or want to enroll? Reach out and we'll respond within one business day.</p>
+
+            <p class="mb-1"><i class="bi bi-envelope-fill"></i> <strong>Email:</strong> training@skillmatrixs.com</p>
+            <p class="mb-1"><i class="bi bi-telephone-fill"></i> <strong>Phone:</strong> +91 98765 43210</p>
+            <p><i class="bi bi-geo-alt-fill"></i> Hyderabad, India</p>
+          </div>
+        </div>
+
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="120">
+          <div class="card p-4">
+            <h5>Payment Options</h5>
+            <p class="text-muted mb-2">Quick payments via popular UPI and bank transfer (details provided on request).</p>
+
+            <ul class="list-unstyled mb-0">
+              <li><strong>UPI (GPay/PhonePe/Paytm):</strong> <code>9876543210@upi</code></li>
+              <li class="mt-2"><strong>Bank Transfer:</strong> SkillMatrixs Training Services</li>
+            </ul>
+
+            <div class="mt-3">
+              <button class="btn btn-outline-primary btn-sm">Show UPI QR</button>
+              <button class="btn btn-primary btn-sm ms-2">Request Invoice</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="mb-1">© <span id="copyright-year"></span> SkillMatrixs — Where Creativity Meets Code.</p>
+      <small class="text-muted">Designed with ♥ for practical learning.</small>
+    </div>
+  </footer>
+
+  <!-- ENROLLMENT IFRAME & MODAL -->
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+  <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form id="enrollForm" target="hidden_iframe" method="POST" action="GOOGLE_FORM_ACTION_URL" novalidate>
+          <div class="modal-header">
+            <h5 class="modal-title" id="enrollModalLabel">Course Enrollment — SkillMatrixs</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <p class="small text-muted">Fill in the form below and we'll contact you with next steps.</p>
+
+            <div class="mb-3">
+              <label for="studentName" class="form-label">Full name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="studentName" name="studentName" required maxlength="100" />
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentEmail" class="form-label">Email <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="studentEmail" name="studentEmail" required maxlength="100" />
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentPhone" class="form-label">Phone <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="studentPhone" name="studentPhone" pattern="[\d\s+()-]{6,20}" required maxlength="20" />
+              <div class="invalid-feedback">Please enter your phone number.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentCourse" class="form-label">Select Course <span class="text-danger">*</span></label>
+              <select id="studentCourse" name="studentCourse" class="form-select" required>
+                <option value="">Choose a course...</option>
+                <option>Full Stack Development with AI Skills</option>
+                <option>45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → Node.js → MySQL)</option>
+                <option>45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → SpringBoot → MySQL)</option>
+                <option>AI Skills</option>
+              </select>
+              <div class="invalid-feedback">Please select a course.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentMessage" class="form-label">Message (optional)</label>
+              <textarea id="studentMessage" name="studentMessage" class="form-control" rows="3" maxlength="800"></textarea>
+            </div>
+
+            <div id="googleFormFieldsContainer"></div>
+            <div id="enrollAlert" class="alert d-none mt-2" role="alert"></div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button id="submitEnrollBtn" type="submit" class="btn btn-primary">Submit Enrollment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    if (window.AOS) {
+      AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 100 });
+    }
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+    (function () {
+      const GOOGLE_FORM_ACTION_URL = 'GOOGLE_FORM_ACTION_URL';
+      const hiddenInputNames = {
+        name: 'entry.1111111111', email: 'entry.2222222222', phone: 'entry.3333333333',
+        course: 'entry.4444444444', message: 'entry.5555555555'
+      };
+
+      const enrollForm = document.getElementById('enrollForm');
+      const googleFieldsContainer = document.getElementById('googleFormFieldsContainer');
+      const enrollAlert = document.getElementById('enrollAlert');
+      const submitBtn = document.getElementById('submitEnrollBtn');
+
+      if (GOOGLE_FORM_ACTION_URL && GOOGLE_FORM_ACTION_URL !== 'GOOGLE_FORM_ACTION_URL') {
+        enrollForm.action = GOOGLE_FORM_ACTION_URL;
+      } else {
+        console.warn('Reminder: replace GOOGLE_FORM_ACTION_URL with your Google Form action URL.');
+      }
+
+      function createHiddenInputs() {
+        googleFieldsContainer.innerHTML = '';
+        for (const key in hiddenInputNames) {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = hiddenInputNames[key];
+          input.id = 'gf_' + key;
+          googleFieldsContainer.appendChild(input);
+        }
+      }
+      createHiddenInputs();
+
+      enrollForm.addEventListener('submit', function (e) {
+        e.preventDefault(); e.stopPropagation();
+        enrollAlert.classList.add('d-none'); enrollAlert.classList.remove('alert-success', 'alert-danger');
+
+        if (!enrollForm.checkValidity()) { enrollForm.classList.add('was-validated'); return; }
+
+        const values = {
+          name: document.getElementById('studentName').value.trim(),
+          email: document.getElementById('studentEmail').value.trim(),
+          phone: document.getElementById('studentPhone').value.trim(),
+          course: document.getElementById('studentCourse').value,
+          message: document.getElementById('studentMessage').value.trim()
+        };
+
+        for (const key in values) {
+          const hidden = document.getElementById('gf_' + key);
+          if (hidden) hidden.value = values[key];
+        }
+
+        submitBtn.disabled = true; submitBtn.innerHTML = 'Submitting...';
+        enrollForm.submit();
+
+        setTimeout(function () {
+          enrollAlert.classList.remove('d-none'); enrollAlert.classList.add('alert-success');
+          enrollAlert.innerHTML = 'Thank you! Your enrollment request has been submitted. We will contact you soon.';
+          enrollForm.reset(); enrollForm.classList.remove('was-validated'); submitBtn.disabled = false; submitBtn.innerHTML = 'Submit Enrollment';
+          setTimeout(function () {
+            const modalEl = document.getElementById('enrollModal'); const modal = bootstrap.Modal.getInstance(modalEl); if (modal) modal.hide();
+          }, 1200);
+        }, 900);
+      });
+
+      (function devCheck() {
+        const missingEntry = Object.values(hiddenInputNames).some(v => typeof v === 'string' && v.startsWith('entry.') && v.length < 12);
+        if (missingEntry || GOOGLE_FORM_ACTION_URL === 'GOOGLE_FORM_ACTION_URL') {
+          console.info('Reminder: Replace GOOGLE_FORM_ACTION_URL and the entry IDs in the enrollment script with your Google Form values.');
+        }
+      })();
+    })();
+
+    // AOS fallback
+    (function(){
+      if (window.AOS) return;
+      const elems = document.querySelectorAll('[data-aos]');
+      elems.forEach(el => el.classList.add('aos-fallback'));
+      if ('IntersectionObserver' in window) {
+        const obs = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) { entry.target.classList.add('in-view'); observer.unobserve(entry.target); }
+          });
+        }, {threshold: 0.12});
+        elems.forEach(e => obs.observe(e));
+      } else { elems.forEach(e => e.classList.add('in-view')); }
+    })();
+  </script>
+    <script>
+/*
+  Copy-Paste Deterrent
+  - Disables text selection, right-click context menu on non-form elements
+  - Blocks common keyboard shortcuts (Ctrl/Cmd+C, X, V, A, U, S, Shift+Ctrl+I)
+  - Prevents copy/cut/paste clipboard events on protected areas
+  - Excludes inputs, textareas, contenteditable elements and links
+  NOTE: This only deters casual copying. Accessibility & UX impacts are noted below.
+*/
+
+(function () {
+  const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+  const modKey = isMac ? 'metaKey' : 'ctrlKey';
+
+  // CSS to prevent selection globally but allow in inputs/textareas/contenteditable
+  const style = document.createElement('style');
+  style.id = 'no-select-style';
+  style.innerHTML = `
+    /* disable text selection on everything except form fields & editable regions */
+    body *:not(input):not(textarea):not([contenteditable="true"]) {
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+    }
+    /* allow selection inside these explicitly */
+    input, textarea, [contenteditable="true"] { user-select: text !important; }
+    /* optional: cursor hint for non-selectable text */
+    body *:not(input):not(textarea):not([contenteditable="true"]) { cursor: default; }
+  `;
+  document.head.appendChild(style);
+
+  // Helper — whether the event target is an editable/form element (exempt)
+  function isEditableTarget(el) {
+    if (!el) return false;
+    const tag = el.tagName && el.tagName.toLowerCase();
+    if (tag === 'input' || tag === 'textarea' || el.isContentEditable) return true;
+    // also allow selection inside anchors or elements with data-allow-copy
+    if (el.closest && el.closest('input,textarea,[contenteditable="true"],[data-allow-copy]')) return true;
+    return false;
+  }
+
+  // Disable context menu (right click) except on editable areas and on images if you want
+  window.addEventListener('contextmenu', function (e) {
+    if (isEditableTarget(e.target)) return; // allow
+    e.preventDefault();
+    // optionally show a tiny toast or visual hint here
+  }, { passive: false });
+
+  // Block common copy/paste shortcuts and devtools keys
+  window.addEventListener('keydown', function (e) {
+    // allow keys in form inputs (so user can type)
+    if (isEditableTarget(e.target)) return;
+
+    // Block Ctrl/Cmd + C/X/V/A/U/S
+    if (e[modKey]) {
+      const key = e.key.toLowerCase();
+      const blocked = ['c','x','v','a','u','s'];
+      if (blocked.includes(key)) {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
+      // block Shift+Ctrl+I (open devtools) and Ctrl+Shift+I
+      if (e.shiftKey && key === 'i') {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
+    }
+
+    // Block F12 (common devtools)
+    if (e.key === 'F12') {
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+  }, true);
+
+  // Block clipboard events (copy, cut, paste) for protected targets
+  ['copy','cut','paste'].forEach(evtName => {
+    document.addEventListener(evtName, function (e) {
+      if (isEditableTarget(e.target)) return; // don't block for form inputs
+      // Prevent default clipboard action
+      e.preventDefault();
+      e.stopPropagation();
+      // Optionally set a custom clipboard message when copy is attempted:
+      if (evtName === 'copy' && e.clipboardData) {
+        const msg = 'Copying content from this site is restricted.';
+        try { e.clipboardData.setData('text/plain', msg); } catch (err) { /* ignore */ }
+      }
+    }, true);
+  });
+
+  // Optional: simple toggle for dev/testing — call window.toggleCopyProtection(false) to disable
+  let protectionEnabled = true;
+  window.toggleCopyProtection = function (enable) {
+    if (typeof enable === 'boolean') protectionEnabled = enable;
+    if (protectionEnabled) {
+      if (!document.head.querySelector('#no-select-style')) document.head.appendChild(style);
+    } else {
+      const s = document.head.querySelector('#no-select-style');
+      if (s) s.remove();
+    }
+  };
+})();
+</script>
+</body>
+</html>
