@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- ====== SEO Meta ====== -->
+  <title>Courses — Full Stack, Angular, Spring Boot, AI Skills | SkillMatrixs</title>
+  <meta name="description" content="Explore SkillMatrixs course catalog: Full Stack Developer, Angular Training, Spring Boot, AI Skills (RAG & Agents), HTML/CSS/JS. Course details, schedules and fees.">
+  <link rel="canonical" href="https://skillmatrixs.com/courses">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="SkillMatrixs">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Courses — Full Stack, Angular, Spring Boot, AI Skills | SkillMatrixs">
+  <meta property="og:description" content="Explore SkillMatrixs course catalog: Full Stack Developer, Angular Training, Spring Boot, AI Skills (RAG & Agents), HTML/CSS/JS.">
+  <meta property="og:image" content="https://skillmatrixs.com/assets/og-courses.jpg">
+  <meta property="og:url" content="https://skillmatrixs.com/courses">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Courses — Full Stack, Angular, Spring Boot, AI Skills | SkillMatrixs">
+  <meta name="twitter:description" content="Explore SkillMatrixs course catalog: Full Stack Developer, Angular Training, Spring Boot, AI Skills (RAG & Agents), HTML/CSS/JS.">
+
+  <!-- Styles & icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#0b57b3;
+      --muted:#6c7a89;
+      --bg:#f7fbff;
+      --card-shadow: 0 12px 30px rgba(11,99,214,0.06);
+    }
+    *{box-sizing:border-box}
+    body{font-family:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,Arial; background:var(--bg); color:#12263f; -webkit-font-smoothing:antialiased;}
+    .navbar{ background: linear-gradient(90deg, rgba(6,40,82,0.98), rgba(11,87,179,0.95)); box-shadow:0 8px 30px rgba(2,6,23,0.08); }
+    .navbar-brand{ color:#fff!important; font-weight:800; }
+    .nav-link{ color: rgba(255,255,255,.92) !important; font-weight:600; }
+
+    header.page-hero{ background: linear-gradient(180deg,#0b57b3,#00b4d8); color:#fff; padding:3.5rem 0; border-bottom-left-radius:18px; border-bottom-right-radius:18px; margin-bottom:1.6rem; }
+    header.page-hero h1{ font-size: clamp(1.6rem, 3.6vw, 2.25rem); font-weight:800; margin-bottom:.5rem; }
+    header.page-hero p.lead{ opacity:.95; max-width:900px; }
+
+    .container-small{ max-width:1100px; margin:0 auto; }
+
+    .controls { display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; margin-bottom:1.25rem; }
+    .controls .form-control { max-width:420px; }
+
+    .course-card{ background:#fff; border-radius:12px; overflow:hidden; box-shadow:var(--card-shadow); transition: transform .25s, box-shadow .25s; display:flex; flex-direction:column; height:100%; }
+    .course-card:hover{ transform: translateY(-8px); box-shadow: 0 30px 60px rgba(10,30,90,0.08); }
+    .course-media{ height:150px; background-size:cover; background-position:center; position:relative; }
+    .course-badge{ position:absolute; left:12px; top:12px; padding:.35rem .6rem; border-radius:999px; font-weight:700; font-size:.8rem; color:#fff; box-shadow:0 8px 18px rgba(2,6,23,0.08); }
+    .badge-present{ background:#198754; }
+    .badge-upcoming{ background:#f59e0b; color:#111; }
+
+    .course-body{ padding:1rem; display:flex; flex-direction:column; gap:.45rem; flex:1 1 auto; }
+    .course-title{ font-weight:700; color: #0b2b5a; margin-bottom:0; font-size:1.02rem; }
+    .course-meta{ color:var(--muted); font-size:.9rem; }
+    .course-actions{ margin-top:auto; display:flex; gap:.5rem; }
+
+    .filter-pill { cursor:pointer; border-radius:999px; padding:.35rem .6rem; background:#fff; border:1px solid rgba(11,87,179,0.06); font-weight:700; }
+    .filter-pill.active{ background:var(--primary); color:#fff; border-color:transparent; }
+
+    footer.site-footer{ background: linear-gradient(90deg,#042a5b,#062a4f); color:#fff; padding:2.5rem 0; margin-top:2.5rem; text-align:center; border-top-left-radius:8px; border-top-right-radius:8px; }
+
+    @media (max-width:767px){ .course-media{ height:120px; } header.page-hero{text-align:center;} .controls{flex-direction:column; align-items:stretch;} }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">SkillMatrixs</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">About</a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="about.html">About SkillMatrixs</a></li>
+              <li><a class="dropdown-item" href="our-story.html">Our Story</a></li>
+              <li><a class="dropdown-item" href="leadership.html">Leadership</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link active" href="courses.html">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2">
+          <a href="/lms" class="btn btn-sm btn-light" title="LMS Portal"><i class="bi bi-grid-3x3-gap-fill"></i> LMS</a>
+          <a href="contact.html" class="btn btn-outline-light btn-sm"><i class="bi bi-envelope-fill"></i> Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="container container-small">
+      <h1>Courses — Full Stack, Angular, Spring Boot &amp; AI</h1>
+      <p class="lead">Choose from job-focused courses designed for career transitions and upskilling. Our 45-day bootcamps and advanced modules include real-time projects, live mentorship, code reviews, and placement assistance. Filter by course, mode (online/offline) and next start date.</p>
+      <div class="mt-3 d-flex gap-2">
+        <a class="btn btn-light btn-lg" href="contact.html">Book Free Demo</a>
+        <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH & FILTER CONTROLS -->
+  <main class="py-5">
+    <div class="container container-small">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Courses</li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class="text-muted small">Showing <span id="resultsCount">4</span> programs</div>
+      </div>
+
+      <div class="controls" role="region" aria-label="Course search and filters">
+        <input id="searchInput" class="form-control" type="search" placeholder="Search courses, e.g. 'Angular' or 'Full Stack'">
+        <div class="d-flex gap-2 align-items-center ms-auto">
+          <button class="filter-pill active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-pill" data-filter="present">Present Batch</button>
+          <button class="filter-pill" data-filter="upcoming">Upcoming</button>
+          <select id="modeSelect" class="form-select" aria-label="Mode filter" style="max-width:200px;">
+            <option value="all">All modes</option>
+            <option value="online">Online</option>
+            <option value="offline">Offline</option>
+            <option value="hybrid">Hybrid</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- COURSES GRID -->
+      <section class="row g-4" id="coursesGrid" aria-live="polite">
+
+        <!-- Course 1: Full Stack with AI (Present) -->
+        <article class="col-lg-4 col-md-6 course-item" data-status="present" data-mode="hybrid" data-title="Full Stack Development with AI Skills">
+          <div class="course-card" role="article" aria-labelledby="c1-title">
+            <div class="course-media" style="background-image:url('/images/angularAi.png');">
+              <span class="course-badge badge-present">Present Batch</span>
+            </div>
+            <div class="course-body">
+              <h3 id="c1-title" class="course-title">Full Stack Development with AI Skills</h3>
+              <div class="course-meta">Angular • Spring Boot • MySQL • AI (RAG, embeddings)</div>
+              <p class="small text-muted mb-2">End-to-end full-stack program with practical AI integrations — project-based, mentor-led, with placement-focused support.</p>
+              <div class="course-actions">
+                <a class="btn btn-outline-primary btn-sm" href="fullstack-ai.html">View details</a>
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="document.getElementById('studentCourse').value='Full Stack Development with AI Skills'">Enroll</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Course 2: 45-Day Full Stack (Node) -->
+        <article class="col-lg-4 col-md-6 course-item" data-status="upcoming" data-mode="offline" data-title="45-Day Full-Stack Developer (Node.js)">
+          <div class="course-card" role="article" aria-labelledby="c2-title">
+            <div class="course-media" style="background-image:url('/images/angularNode.png');">
+              <span class="course-badge badge-upcoming">Upcoming</span>
+            </div>
+            <div class="course-body">
+              <h3 id="c2-title" class="course-title">45-Day Full-Stack (HTML → Angular → Node.js → MySQL)</h3>
+              <div class="course-meta">HTML5 • CSS3 • JavaScript • Node</div>
+              <p class="small text-muted mb-2">Intensive 45-day bootcamp — build a capstone app with Angular frontend and Node.js backend.</p>
+              <div class="course-actions">
+                <a class="btn btn-outline-primary btn-sm" href="45-fullstack-node.html">View details</a>
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="document.getElementById('studentCourse').value='45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → Node.js → MySQL)'">Enroll</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Course 3: 45-Day Full Stack (Spring Boot) -->
+        <article class="col-lg-4 col-md-6 course-item" data-status="upcoming" data-mode="offline" data-title="45-Day Full-Stack Developer (Spring Boot)">
+          <div class="course-card" role="article" aria-labelledby="c3-title">
+            <div class="course-media" style="background-image:url('/images/angularSpring.png');">
+              <span class="course-badge badge-upcoming">Upcoming</span>
+            </div>
+            <div class="course-body">
+              <h3 id="c3-title" class="course-title">45-Day Full-Stack (Angular → Spring Boot → MySQL)</h3>
+              <div class="course-meta">Enterprise • REST • Security basics</div>
+              <p class="small text-muted mb-2">Enterprise-focused bootcamp with Spring Boot backends, security basics, and deployable app architecture.</p>
+              <div class="course-actions">
+                <a class="btn btn-outline-primary btn-sm" href="45-fullstack-sb.html">View details</a>
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="document.getElementById('studentCourse').value='45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → SpringBoot → MySQL)'">Enroll</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Course 4: AI Skills -->
+        <article class="col-lg-4 col-md-6 course-item" data-status="upcoming" data-mode="online" data-title="AI Skills — Generative AI, Agentic AI, RAG">
+          <div class="course-card" role="article" aria-labelledby="c4-title">
+            <div class="course-media" style="background-image:url('/images/aisills.png');">
+              <span class="course-badge badge-upcoming">Upcoming</span>
+            </div>
+            <div class="course-body">
+              <h3 id="c4-title" class="course-title">AI Skills — Generative AI, Agentic AI & RAG</h3>
+              <div class="course-meta">Generative • Agents • RAG</div>
+              <p class="small text-muted mb-2">Focused AI module: prompt engineering, embeddings, retrieval-augmented generation, and building agent workflows.</p>
+              <div class="course-actions">
+                <a class="btn btn-outline-primary btn-sm" href="ai-skills.html">View details</a>
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="document.getElementById('studentCourse').value='AI Skills'">Enroll</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- You can add more course-item blocks here for additional courses -->
+      </section>
+
+      <!-- FAQ / Short Notes -->
+      <section class="mt-4">
+        <div class="card p-3">
+          <div class="d-flex justify-content-between align-items-start flex-column flex-md-row gap-3">
+            <div>
+              <h5 class="mb-1">Need help choosing?</h5>
+              <p class="small text-muted mb-0">Call us at <a href="tel:+919876543210">+91 98765 43210</a> or book a free demo to find the right program.</p>
+            </div>
+            <div class="text-md-end">
+              <a class="btn btn-primary" href="contact.html">Contact Admissions</a>
+              <button class="btn btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#enrollModal">Quick Enroll</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="mb-1">© <span id="copyright-year"></span> SkillMatrixs — Where Creativity Meets Code.</p>
+      <small class="text-muted">Practical, project-based training for job-ready developers.</small>
+    </div>
+  </footer>
+
+  <!-- ENROLLMENT modal + hidden iframe -->
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+  <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form id="enrollForm" target="hidden_iframe" method="POST" action="GOOGLE_FORM_ACTION_URL" novalidate>
+          <div class="modal-header">
+            <h5 class="modal-title" id="enrollModalLabel">Course Enrollment — SkillMatrixs</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <p class="small text-muted">Fill in the form below and we'll contact you with next steps.</p>
+
+            <div class="mb-3">
+              <label for="studentName" class="form-label">Full name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="studentName" name="studentName" required maxlength="100" />
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentEmail" class="form-label">Email <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="studentEmail" name="studentEmail" required maxlength="100" />
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentPhone" class="form-label">Phone <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="studentPhone" name="studentPhone" pattern="[\d\s+()-]{6,20}" required maxlength="20" />
+              <div class="invalid-feedback">Please enter your phone number.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentCourse" class="form-label">Select Course <span class="text-danger">*</span></label>
+              <select id="studentCourse" name="studentCourse" class="form-select" required>
+                <option value="">Choose a course...</option>
+                <option>Full Stack Development with AI Skills</option>
+                <option>45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → Node.js → MySQL)</option>
+                <option>45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → SpringBoot → MySQL)</option>
+                <option>AI Skills</option>
+              </select>
+              <div class="invalid-feedback">Please select a course.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentMessage" class="form-label">Message (optional)</label>
+              <textarea id="studentMessage" name="studentMessage" class="form-control" rows="3" maxlength="800"></textarea>
+            </div>
+
+            <div id="googleFormFieldsContainer"></div>
+            <div id="enrollAlert" class="alert d-none mt-2" role="alert"></div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button id="submitEnrollBtn" type="submit" class="btn btn-primary">Submit Enrollment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Structured data for courses (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"EducationalOrganization",
+        "name":"SkillMatrixs",
+        "url":"https://skillmatrixs.com",
+        "logo":"https://skillmatrixs.com/assets/logo.png"
+      },
+      {
+        "@type":"Course",
+        "name":"Full Stack Development with AI Skills",
+        "description":"Angular, Spring Boot, MySQL and AI integrations (RAG, embeddings). Project-based training with placement support.",
+        "provider":{"@type":"Organization","name":"SkillMatrixs","sameAs":"https://skillmatrixs.com"},
+        "url":"https://skillmatrixs.com/full-stack-development-course"
+      },
+      {
+        "@type":"Course",
+        "name":"45-Day Full-Stack (Angular → Node.js → MySQL)",
+        "description":"Fast-track 45-day bootcamp: HTML/CSS/JS → Angular → Node.js → MySQL with capstone project.",
+        "provider":{"@type":"Organization","name":"SkillMatrixs"},
+        "url":"https://skillmatrixs.com/full-stack-node-training"
+      },
+      {
+        "@type":"Course",
+        "name":"45-Day Full-Stack (Angular → Spring Boot → MySQL)",
+        "description":"Enterprise-focused 45-day bootcamp covering Spring Boot backends, Angular frontends and deployable architectures.",
+        "provider":{"@type":"Organization","name":"SkillMatrixs"},
+        "url":"https://skillmatrixs.com/full-stack-springboot-training"
+      },
+      {
+        "@type":"Course",
+        "name":"AI Skills — Generative AI, Agentic AI & RAG",
+        "description":"Focused AI module covering generative models, agents, RAG pipelines and how to integrate them into apps.",
+        "provider":{"@type":"Organization","name":"SkillMatrixs"},
+        "url":"https://skillmatrixs.com/ai-skills-training"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // dynamic year
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+    // Simple client-side search + filter for course cards
+    (function () {
+      const searchInput = document.getElementById('searchInput');
+      const filterPills = Array.from(document.querySelectorAll('.filter-pill'));
+      const modeSelect = document.getElementById('modeSelect');
+      const courseItems = Array.from(document.querySelectorAll('.course-item'));
+      const resultsCount = document.getElementById('resultsCount');
+
+      function normalize(s){ return (s||'').toLowerCase().trim(); }
+
+      function applyFilters(){
+        const q = normalize(searchInput.value);
+        const mode = modeSelect.value;
+        const activeStatus = document.querySelector('.filter-pill.active')?.getAttribute('data-filter') || 'all';
+
+        let visible = 0;
+        courseItems.forEach(item => {
+          const title = normalize(item.getAttribute('data-title'));
+          const status = item.getAttribute('data-status');
+          const itemMode = item.getAttribute('data-mode');
+
+          let ok = true;
+          if (activeStatus !== 'all' && status !== activeStatus) ok = false;
+          if (mode !== 'all' && itemMode !== mode) ok = false;
+          if (q && !(title.includes(q))) ok = false;
+
+          item.style.display = ok ? '' : 'none';
+          if (ok) visible++;
+        });
+
+        resultsCount.textContent = visible;
+      }
+
+      // search debounce
+      let timer;
+      searchInput.addEventListener('input', function () {
+        clearTimeout(timer);
+        timer = setTimeout(applyFilters, 180);
+      });
+
+      // mode change
+      modeSelect.addEventListener('change', applyFilters);
+
+      // filter pills
+      filterPills.forEach(pill => {
+        pill.addEventListener('click', function () {
+          filterPills.forEach(p=>p.classList.remove('active'));
+          this.classList.add('active');
+          applyFilters();
+        });
+      });
+
+      // initial count
+      applyFilters();
+
+      // Accessibility: allow Enter on search to focus first visible View details
+      searchInput.addEventListener('keydown', function(e){
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          const first = document.querySelector('.course-item[style*="display:"] .course-actions a');
+          if (first) first.focus();
+        }
+      });
+    })();
+
+    /* =========================
+       Enrollment: Google Form submission via hidden iframe
+       Replace the placeholders below with your Google Form info.
+    ========================= */
+    (function () {
+      const GOOGLE_FORM_ACTION_URL = 'GOOGLE_FORM_ACTION_URL'; // e.g. https://docs.google.com/forms/d/e/FORM_ID/formResponse
+
+      // Map logical names to Google Form 'entry' field names.
+      const hiddenInputNames = {
+        name: 'entry.1111111111',
+        email: 'entry.2222222222',
+        phone: 'entry.3333333333',
+        course: 'entry.4444444444',
+        message: 'entry.5555555555'
+      };
+
+      const enrollForm = document.getElementById('enrollForm');
+      const googleFieldsContainer = document.getElementById('googleFormFieldsContainer');
+      const enrollAlert = document.getElementById('enrollAlert');
+      const submitBtn = document.getElementById('submitEnrollBtn');
+
+      if (GOOGLE_FORM_ACTION_URL && GOOGLE_FORM_ACTION_URL !== 'GOOGLE_FORM_ACTION_URL') {
+        enrollForm.action = GOOGLE_FORM_ACTION_URL;
+      } else {
+        console.warn('Reminder: replace GOOGLE_FORM_ACTION_URL with your Google Form action URL.');
+      }
+
+      function createHiddenInputs() {
+        googleFieldsContainer.innerHTML = '';
+        for (const key in hiddenInputNames) {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = hiddenInputNames[key];
+          input.id = 'gf_' + key;
+          googleFieldsContainer.appendChild(input);
+        }
+      }
+      createHiddenInputs();
+
+      enrollForm.addEventListener('submit', function (e) {
+        e.preventDefault(); e.stopPropagation();
+        enrollAlert.classList.add('d-none'); enrollAlert.classList.remove('alert-success', 'alert-danger');
+
+        if (!enrollForm.checkValidity()) { enrollForm.classList.add('was-validated'); return; }
+
+        const values = {
+          name: document.getElementById('studentName').value.trim(),
+          email: document.getElementById('studentEmail').value.trim(),
+          phone: document.getElementById('studentPhone').value.trim(),
+          course: document.getElementById('studentCourse').value,
+          message: document.getElementById('studentMessage').value.trim()
+        };
+
+        for (const key in values) {
+          const hidden = document.getElementById('gf_' + key);
+          if (hidden) hidden.value = values[key];
+        }
+
+        submitBtn.disabled = true; submitBtn.innerHTML = 'Submitting...';
+        enrollForm.submit();
+
+        setTimeout(function () {
+          enrollAlert.classList.remove('d-none'); enrollAlert.classList.add('alert-success');
+          enrollAlert.innerHTML = 'Thank you! Your enrollment request has been submitted. We will contact you soon.';
+          enrollForm.reset(); enrollForm.classList.remove('was-validated'); submitBtn.disabled = false; submitBtn.innerHTML = 'Submit Enrollment';
+          setTimeout(function () {
+            const modalEl = document.getElementById('enrollModal'); const modal = bootstrap.Modal.getInstance(modalEl); if (modal) modal.hide();
+          }, 900);
+        }, 900);
+      });
+    })();
+  </script>
+</body>
+</html>
