@@ -21,24 +21,60 @@
 </head>
 <body>
 
-  <!-- navbar -->
+  <!-- NAVBAR (professional feel + right-side actions) -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="/index.html">SkillMatrixs</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+      <!-- logo + brand -->
+          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="SkillMatrixs homepage">
+      <img src="/images/logo.png" alt="SkillMatrixs logo" class="nav-logo" />
+      <!-- <span class="brand-text ms-2 d-none d-md-inline">SkillMatrixs</span> -->
+    </a>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse"
+              aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="/courses.html">Courses</a></li>
-          <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="about.html">About SkillMatrixs</a></li>
+              <li><a class="dropdown-item" href="leadership.html">Leadership</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="our-story.html">Our Story</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="courses.html">Programs</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="services.html">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link" href="staffing.html">Staffing</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Resources
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+              <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+              <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+              <li><a class="dropdown-item" href="terms.html">Terms & Privacy</a></li>
+            </ul>
+          </li>
         </ul>
-        <div class="d-flex gap-2">
-          <a class="btn btn-light btn-sm" href="/lms">LMS</a>
-          <a class="btn btn-outline-light btn-sm" href="/contact.html">Contact</a>
+
+        <!-- right side actions -->
+        <div class="d-flex align-items-center gap-2 nav-actions">
+          <a id="lmsBtn" class="btn btn-lms btn-sm" href="#" role="button" title="Open LMS Portal">
+            <i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i> LMS Portal
+          </a>
+          <a class="btn btn-outline-light btn-sm" href="contact.html"><i class="bi bi-envelope-fill" aria-hidden="true"></i> Contact</a>
         </div>
       </div>
     </div>

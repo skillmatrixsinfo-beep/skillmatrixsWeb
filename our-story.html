@@ -25,14 +25,40 @@
       -webkit-font-smoothing:antialiased;
     }
 
-    /* Navbar */
-    .navbar{
-      background: linear-gradient(90deg, rgba(6,40,82,0.98), rgba(11,87,179,0.95));
-      box-shadow: 0 8px 30px rgba(2,6,23,0.08);
+   /* ---------- NAVBAR ---------- */
+    .navbar {
+      background: linear-gradient(90deg, #080808, #04789c);
+      box-shadow: 0 8px 30px rgba(2,6,23,0.12);
     }
-    .navbar-brand{ color:#fff !important; font-weight:800; }
+    .navbar-brand { 
+        font-weight: 800; 
+        color: #fff !important; 
+        letter-spacing: .2px; 
+    }
+       /* minimal safeguard inlined styles (your main styles remain in styles.css) */
+    .nav-logo {
+      height: 2.6em;      /* Maintain the desired vertical size (3em) */
+      width: auto;      /* Let the width scale proportionally based on the height */
+      max-width: 100%;  /* Ensures it doesn't exceed the parent container width */
+      display: block;
+    }
+
+    /* --- Keep the rest of your CSS --- */
+
+    .brand-text {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: white;
+    }
     .nav-link{ color:rgba(255,255,255,0.92) !important; font-weight:600; }
 
+    /* Right action buttons */
+    .nav-actions .btn {
+      border-radius: 999px;
+      padding: .45rem .8rem;
+      font-weight: 700;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+    }
     /* Hero */
     .hero {
       background: linear-gradient(135deg,#0b57b3,#00b4d8);
@@ -90,10 +116,15 @@
 </head>
 <body>
 
-   <!-- NAVBAR (professional feel + right-side actions) -->
+  <!-- NAVBAR (professional feel + right-side actions) -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">SkillMatrixs</a>
+      <!-- logo + brand -->
+          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="SkillMatrixs homepage">
+      <img src="/images/logo.png" alt="SkillMatrixs logo" class="nav-logo" />
+      <!-- <span class="brand-text ms-2 d-none d-md-inline">SkillMatrixs</span> -->
+    </a>
+
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse"
               aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -117,8 +148,8 @@
           </li>
 
           <li class="nav-item"><a class="nav-link" href="courses.html">Programs</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Solutions</a></li>
-          <li class="nav-item"><a class="nav-link" href="staffing.html">Staffing</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="services.html">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link" href="staffing.html">Staffing</a></li> -->
           <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
 
           <li class="nav-item dropdown">
@@ -143,6 +174,7 @@
       </div>
     </div>
   </nav>
+
 
   <!-- HERO -->
   <header class="hero">
@@ -191,7 +223,7 @@
   <footer class="site-footer">
     <div class="container">
       <p class="mb-1">© <span id="year"></span> SkillMatrixs — Where Creativity Meets Code.</p>
-      <small class="text-muted">Built with experience. Taught with care.</small>
+      <small class="text-white-50">Built with experience. Taught with care.</small>
     </div>
   </footer>
 

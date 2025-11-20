@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blog — SkillMatrixs | Angular, Full Stack & AI Tutorials</title>
+  <meta name="description" content="SkillMatrixs blog: tutorials, roadmaps, interview tips and AI explainers for developers and students in Hyderabad.">
+  <link rel="canonical" href="https://skillmatrixs.com/blog">
+  <meta property="og:title" content="SkillMatrixs Blog — Angular, Full Stack & AI">
+  <meta property="og:description" content="Tutorials, tips and roadmaps to become a Full Stack developer.">
+  <meta property="og:url" content="https://skillmatrixs.com/blog">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root{ --brand1:#2EBFC2; --brand2:#00AFEF; --bg:#fff; }
+    body{font-family:"Poppins",system-ui,Arial;background:#f7fbff;color:#12263f;}
+    .container-small{max-width:1100px;margin:0 auto;}
+    .post-card{background:#fff;border-radius:12px;padding:1rem;box-shadow:0 10px 30px rgba(2,6,23,0.06);}
+    .tag { display:inline-block; padding:.25rem .5rem; border-radius:999px; background:rgba(11,87,179,0.06); color:#0b3b5a; font-weight:600; font-size:.8rem;}
+  </style>
+</head>
+<body>
+   <!-- NAVBAR (professional feel + right-side actions) -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <!-- logo + brand -->
+          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="SkillMatrixs homepage">
+      <img src="/images/logo.png" alt="SkillMatrixs logo" class="nav-logo" />
+      <!-- <span class="brand-text ms-2 d-none d-md-inline">SkillMatrixs</span> -->
+    </a>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse"
+              aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="about.html">About SkillMatrixs</a></li>
+              <li><a class="dropdown-item" href="leadership.html">Leadership</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="our-story.html">Our Story</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="courses.html">Programs</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="services.html">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link" href="staffing.html">Staffing</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Resources
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+              <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+              <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+              <li><a class="dropdown-item" href="terms.html">Terms & Privacy</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- right side actions -->
+        <div class="d-flex align-items-center gap-2 nav-actions">
+          <a id="lmsBtn" class="btn btn-lms btn-sm" href="#" role="button" title="Open LMS Portal">
+            <i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i> LMS Portal
+          </a>
+          <a class="btn btn-outline-light btn-sm" href="contact.html"><i class="bi bi-envelope-fill" aria-hidden="true"></i> Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="py-5">
+    <div class="container container-small">
+      <header class="mb-4">
+        <h1>From the SkillMatrixs Blog</h1>
+        <p class="text-muted">Guides, roadmaps and practical tutorials — updated weekly. Filter by topic below.</p>
+      </header>
+
+      <div class="d-flex gap-3 align-items-center mb-3">
+        <input id="postSearch" class="form-control" placeholder="Search posts (e.g. 'Angular', 'RAG')" style="max-width:520px;">
+        <select id="categorySelect" class="form-select" style="max-width:220px;">
+          <option value="all">All topics</option>
+          <option value="angular">Angular</option>
+          <option value="fullstack">Full Stack</option>
+          <option value="ai">AI</option>
+          <option value="careers">Careers</option>
+        </select>
+      </div>
+
+      <section id="posts" class="row g-4">
+        <!-- Post 1 -->
+        <article class="col-lg-6" data-categories="angular,career" data-title="Best way to learn Angular in 2025">
+          <div class="post-card">
+            <h3><a href="blog/best-way-to-learn-angular-2025.html">Best way to learn Angular in 2025</a></h3>
+            <p class="small text-muted mb-1">Published: 2025-06-01 • Category: Angular</p>
+            <p class="text-muted">A step-by-step learning path for beginners and intermediates — real projects, RxJS, testing and interview tips.</p>
+            <div><span class="tag">Angular</span> <span class="tag">Roadmap</span></div>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="col-lg-6" data-categories="fullstack" data-title="Full Stack Developer Roadmap 2025">
+          <div class="post-card">
+            <h3><a href="blog/fullstack-developer-roadmap-2025.html">Full Stack Developer Roadmap 2025</a></h3>
+            <p class="small text-muted mb-1">Published: 2025-05-15 • Category: Full Stack</p>
+            <p class="text-muted">The essential skills, projects and interview checklist to get your first developer job or advance your career.</p>
+            <div><span class="tag">Full Stack</span> <span class="tag">Career</span></div>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="col-lg-6" data-categories="ai" data-title="What is RAG and how to build a simple RAG app">
+          <div class="post-card">
+            <h3><a href="blog/what-is-rag.html">What is RAG and how to build a simple RAG app</a></h3>
+            <p class="small text-muted mb-1">Published: 2025-04-02 • Category: AI</p>
+            <p class="text-muted">Hands-on explanation of Retrieval-Augmented Generation, embeddings and a small implementation you can run locally.</p>
+            <div><span class="tag">AI</span> <span class="tag">RAG</span></div>
+          </div>
+        </article>
+
+        <!-- Post 4 -->
+        <article class="col-lg-6" data-categories="careers" data-title="Top Angular interview questions for 2025">
+          <div class="post-card">
+            <h3><a href="blog/angular-interview-questions-2025.html">Top Angular interview questions for 2025</a></h3>
+            <p class="small text-muted mb-1">Published: 2025-03-12 • Category: Careers</p>
+            <p class="text-muted">Sample questions and model answers focused on real interview scenarios for frontend and full stack roles.</p>
+            <div><span class="tag">Careers</span> <span class="tag">Interview</span></div>
+          </div>
+        </article>
+      </section>
+
+      <nav class="mt-4" aria-label="Blog pagination">
+        <ul class="pagination">
+          <li class="page-item disabled"><a class="page-link" href="#">‹ Prev</a></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next ›</a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="mb-1">© <span id="copyright-year"></span> SkillMatrixs — Where Creativity Meets Code.</p>
+      <small class="text-white">Practical, project-based training for job-ready developers.</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){
+      const search = document.getElementById('postSearch');
+      const select = document.getElementById('categorySelect');
+      const posts = Array.from(document.querySelectorAll('#posts article'));
+      function apply(){
+        const q = (search.value||'').toLowerCase().trim();
+        const cat = select.value;
+        posts.forEach(p=>{
+          const title = p.getAttribute('data-title').toLowerCase();
+          const cats = p.getAttribute('data-categories').toLowerCase();
+          const okQ = !q || title.includes(q) || p.innerText.toLowerCase().includes(q);
+          const okC = (cat==='all') || cats.split(',').includes(cat);
+          p.style.display = (okQ && okC) ? '' : 'none';
+        });
+      }
+      search.addEventListener('input', apply);
+      select.addEventListener('change', apply);
+    })();
+  </script>
+</body>
+</html>
