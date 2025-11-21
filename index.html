@@ -1,13 +1,16 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <!-- ===== PRIMARY SEO META ===== -->
   <title>SkillMatrixs — Full Stack, Angular, Spring Boot & AI Training in Hyderabad | Job-focused Bootcamps</title>
-  <meta name="description" content="SkillMatrixs (Hyderabad) offers job-oriented Full Stack, Angular, Spring Boot, MySQL and AI training (Generative AI, RAG, Agents). Classroom & online cohorts in Miyapur, Kukatpally & Chandanagar — real projects, mentor-led, placement support.">
-  <meta name="keywords" content="Full Stack Developer Course, Angular training Hyderabad, Spring Boot training, AI skills training, 45-day full stack, IT training institute Hyderabad, Full Stack training Miyapur, Angular classes Madinaguda">
+  <meta name="description"
+    content="SkillMatrixs (Hyderabad) offers job-oriented Full Stack, Angular, Spring Boot, MySQL and AI training (Generative AI, RAG, Agents). Classroom & online cohorts in Miyapur, Kukatpally & Chandanagar — real projects, mentor-led, placement support.">
+  <meta name="keywords"
+    content="Full Stack Developer Course, Angular training Hyderabad, Spring Boot training, AI skills training, 45-day full stack, IT training institute Hyderabad, Full Stack training Miyapur, Angular classes Madinaguda">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://skillmatrixs.com/">
 
@@ -19,7 +22,8 @@
   <meta property="og:site_name" content="SkillMatrixs">
   <meta property="og:type" content="website">
   <meta property="og:title" content="SkillMatrixs — Full Stack, Angular, Spring Boot & AI Training in Hyderabad">
-  <meta property="og:description" content="Job-oriented Full Stack, Angular, Spring Boot, MySQL and AI training with real projects. Offline & online cohorts in Miyapur, Kukatpally & Chandanagar — mentor-led, placement support.">
+  <meta property="og:description"
+    content="Job-oriented Full Stack, Angular, Spring Boot, MySQL and AI training with real projects. Offline & online cohorts in Miyapur, Kukatpally & Chandanagar — mentor-led, placement support.">
   <meta property="og:image" content="https://skillmatrixs.com/assets/og-image.jpg">
   <meta property="og:url" content="https://skillmatrixs.com/">
 
@@ -27,7 +31,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@SkillMatrixs">
   <meta name="twitter:title" content="SkillMatrixs — Full Stack & AI Training, Hyderabad">
-  <meta name="twitter:description" content="Join SkillMatrixs for practical Full Stack, Angular, Spring Boot and AI courses — real projects, live mentors and placement-focused training.">
+  <meta name="twitter:description"
+    content="Join SkillMatrixs for practical Full Stack, Angular, Spring Boot and AI courses — real projects, live mentors and placement-focused training.">
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -37,23 +42,78 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css">
   <style>
- 
+
   </style>
 </head>
+
 <body>
+  <!-- TOP SOCIAL BAR (place above the main navbar) -->
+  <div class="top-bar d-flex align-items-center justify-content-between px-3">
+    <!-- LEFT: small brand logo -->
+    <div class="d-flex align-items-center">
+      <a href="index.html" class="d-flex align-items-center" aria-label="SkillMatrixs home">
+        <!-- USING uploaded navbar logo file (update path if you moved it to /images or /assets) -->
+        <!-- <img src="/images/logo.png" alt="SkillMatrixs" class="topbar-logo"> -->
+        <span class="ms-2 d-none d-md-inline site-name">SkillMatrixs</span>
+      </a>
+    </div>
+
+    <!-- RIGHT: social icons + CTAs (collapsible on mobile) -->
+    <div class="d-flex align-items-center gap-2">
+      <!-- collapse toggler (visible on small screens) -->
+      <button class="social-toggler btn btn-sm btn-link d-md-none" aria-expanded="false"
+        aria-controls="topSocialCollapse" type="button">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <!-- social + CTAs -->
+      <div id="topSocialCollapse" class="top-social d-none d-md-flex align-items-center gap-2">
+        <a class="top-social-link" href="https://www.instagram.com/skillmatrixs2610/" target="_blank" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a class="top-social-link" href="https://www.facebook.com/profile.php?id=61584035521310" target="_blank" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a class="top-social-link" href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a class="top-social-link" href="https://www.youtube.com/@skillMatrixs" target="_blank"
+          aria-label="YouTube">
+          <i class="bi bi-youtube"></i>
+        </a>
+
+        <!-- Call Now -->
+        <a class="btn btn-call btn-sm ms-2" href="tel:+919492195223" aria-label="Call SkillMatrixs">Call Now</a>
+
+        <!-- WhatsApp Quick Chat (opens chat) -->
+        <a class="btn btn-whatsapp btn-sm ms-1"
+          href="https://wa.me/919492195223?text=Hi%20SkillMatrixs%2C%20I%27d%20like%20to%20enquire%20about%20courses"
+          target="_blank" aria-label="WhatsApp Chat">
+          <i class="bi bi-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp quick-chat button (bottom-right) -->
+  <a href="https://wa.me/919492195223?text=Hi%20SkillMatrixs%2C%20I%27d%20like%20to%20enquire%20about%20courses"
+    target="_blank" class="floating-whatsapp" aria-label="WhatsApp chat">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
 
   <!-- NAVBAR (professional feel + right-side actions) -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
       <!-- logo + brand -->
-          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="SkillMatrixs homepage">
-      <img src="/images/logo.png" alt="SkillMatrixs logo" class="nav-logo" />
-      <!-- <span class="brand-text ms-2 d-none d-md-inline">SkillMatrixs</span> -->
-    </a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="SkillMatrixs homepage">
+        <img src="/images/logo.png" alt="SkillMatrixs logo" class="nav-logo" />
+        <!-- <span class="brand-text ms-2 d-none d-md-inline">SkillMatrixs</span> -->
+      </a>
 
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse"
-              aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -62,13 +122,16 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               About
             </a>
             <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
               <li><a class="dropdown-item" href="about.html">About SkillMatrixs</a></li>
               <li><a class="dropdown-item" href="leadership.html">Leadership</a></li>
-              <li><hr class="dropdown-divider"></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
               <li><a class="dropdown-item" href="our-story.html">Our Story</a></li>
             </ul>
           </li>
@@ -79,7 +142,8 @@
           <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               Resources
             </a>
             <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
@@ -95,7 +159,8 @@
           <a id="lmsBtn" class="btn btn-lms btn-sm" href="#" role="button" title="Open LMS Portal">
             <i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i> LMS Portal
           </a>
-          <a class="btn btn-outline-light btn-sm" href="contact.html"><i class="bi bi-envelope-fill" aria-hidden="true"></i> Contact</a>
+          <a class="btn btn-outline-light btn-sm" href="contact.html"><i class="bi bi-envelope-fill"
+              aria-hidden="true"></i> Contact</a>
         </div>
       </div>
     </div>
@@ -106,11 +171,13 @@
     <div class="container">
       <div data-aos="fade-down" data-aos-duration="700">
         <h1>SkillMatrixs</h1>
-        <p class="lead">Practical, industry-led software training — Angular, Spring Boot, Full-stack, and modern AI skills.</p>
+        <p class="lead">Practical, industry-led software training — Angular, Spring Boot, Full-stack, and modern AI
+          skills.</p>
 
         <div class="mt-3 d-flex gap-3">
           <a class="btn btn-light btn-lg shadow-sm" href="courses.html">Explore Programs</a>
-          <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#enrollModal">Register for Course</button>
+          <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#enrollModal">Register for
+            Course</button>
         </div>
       </div>
     </div>
@@ -135,11 +202,13 @@
             <div class="course-body">
               <h3 class="course-title">Full Stack Development with AI Skills</h3>
               <div class="course-meta">Angular • Spring Boot • MySQL • AI integration</div>
-              <p class="small text-muted mb-2">End-to-end full-stack training combined with hands-on AI features: RAG, prompts, and model integrations.</p>
+              <p class="small text-muted mb-2">End-to-end full-stack training combined with hands-on AI features: RAG,
+                prompts, and model integrations.</p>
 
               <div class="course-actions">
                 <a class="btn btn-outline-primary btn-sm" href="full-stack-development-course.html">View details</a>
-                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="document.getElementById('studentCourse').value='Full Stack Development with AI Skills'">Enroll</button>
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal"
+                  onclick="document.getElementById('studentCourse').value='Full Stack Development with AI Skills'">Enroll</button>
               </div>
             </div>
           </div>
@@ -155,11 +224,13 @@
             <div class="course-body">
               <h3 class="course-title">45-Day Full-Stack (Angular → Node.js → MySQL)</h3>
               <div class="course-meta">HTML5 • CSS3 • JavaScript • Node.js</div>
-              <p class="small text-muted mb-2">Fast-track bootcamp: build a capstone app using Angular frontend and Node.js backend with MySQL.</p>
+              <p class="small text-muted mb-2">Fast-track bootcamp: build a capstone app using Angular frontend and
+                Node.js backend with MySQL.</p>
 
               <div class="course-actions">
                 <a class="btn btn-outline-primary btn-sm" href="angular-training-hyderabad.html">View details</a>
-                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="document.getElementById('studentCourse').value='45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → Node.js → MySQL)'">Enroll</button>
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal"
+                  onclick="document.getElementById('studentCourse').value='45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → Node.js → MySQL)'">Enroll</button>
               </div>
             </div>
           </div>
@@ -175,11 +246,13 @@
             <div class="course-body">
               <h3 class="course-title">45-Day Full-Stack (Angular → SpringBoot → MySQL)</h3>
               <div class="course-meta">Enterprise-focused • REST • Security basics</div>
-              <p class="small text-muted mb-2">Build secure REST APIs with Spring Boot and integrate them with a modern Angular frontend.</p>
+              <p class="small text-muted mb-2">Build secure REST APIs with Spring Boot and integrate them with a modern
+                Angular frontend.</p>
 
               <div class="course-actions">
                 <a class="btn btn-outline-primary btn-sm" href="full-stack-development-course.html">View details</a>
-                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="document.getElementById('studentCourse').value='45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → SpringBoot → MySQL)'">Enroll</button>
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal"
+                  onclick="document.getElementById('studentCourse').value='45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → SpringBoot → MySQL)'">Enroll</button>
               </div>
             </div>
           </div>
@@ -195,11 +268,13 @@
             <div class="course-body">
               <h3 class="course-title">Learn AI Skills — Generative • Agentic AI • AI Agents</h3>
               <div class="course-meta">Generative AI • Agents • RAG</div>
-              <p class="small text-muted mb-2">A focused module on generative models, RAG pipelines, agentic systems and production concerns.</p>
+              <p class="small text-muted mb-2">A focused module on generative models, RAG pipelines, agentic systems and
+                production concerns.</p>
 
               <div class="course-actions">
                 <a class="btn btn-outline-primary btn-sm" href="ai-skills.html">View details</a>
-                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="document.getElementById('studentCourse').value='AI Skills'">Enroll</button>
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enrollModal"
+                  onclick="document.getElementById('studentCourse').value='AI Skills'">Enroll</button>
               </div>
             </div>
           </div>
@@ -215,20 +290,34 @@
       <h2 class="section-title" data-aos="fade-up">About the Trainer</h2>
       <div class="row align-items-center gy-4">
         <div class="col-md-3 text-center" data-aos="zoom-in" data-aos-delay="50">
-          <img src="/images/software-trainer.jpg" alt="Trainer" class="img-fluid rounded-3" style="box-shadow:var(--card-shadow);">
+          <img src="/images/software-trainer.jpg" alt="Trainer" class="img-fluid rounded-3"
+            style="box-shadow:var(--card-shadow);">
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-delay="100">
           <h4 class="fw-bold">Bala's</h4>
-          <p class="text-muted">A results-driven Full Stack Architect & Trainer with 13+ years of experience in leading product and services organizations. Specialized in building scalable, high-performance applications using Angular, RxJS, Java microservices, Spring Boot, SAPUI5, and Android. Experienced across the entire SDLC, including architecture, development, testing, deployment, and production support.
+          <p class="text-muted">A results-driven Full Stack Architect & Trainer with 13+ years of experience in leading
+            product and services organizations. Specialized in building scalable, high-performance applications using
+            Angular, RxJS, Java microservices, Spring Boot, SAPUI5, and Android. Experienced across the entire SDLC,
+            including architecture, development, testing, deployment, and production support.
 
-With a strong foundation in frontend architecture, microservices design, and clean engineering practices, I focus on creating reliable, maintainable, and future-ready solutions. I am passionate about mentoring developers, conducting technical bootcamps, and simplifying complex concepts into practical, industry-focused learning.
+            With a strong foundation in frontend architecture, microservices design, and clean engineering practices, I
+            focus on creating reliable, maintainable, and future-ready solutions. I am passionate about mentoring
+            developers, conducting technical bootcamps, and simplifying complex concepts into practical,
+            industry-focused learning.
 
-Recognized for driving engineering excellence, transforming teams, and enabling organizations to deliver enterprise-grade applications with confidence.
-I focus on practical, project-driven training that emphasizes clean architecture, testable and maintainable code, and production-ready practices. I mentor students through capstone projects, code reviews, and mock interviews to improve job-readiness and confidence. Available for corporate workshops and one-on-one mentoring.
-<br> Specialties:
-Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • Android Development • Technical Mentorship • Corporate Training & Bootcamps • End-to-End Development</p>
+            Recognized for driving engineering excellence, transforming teams, and enabling organizations to deliver
+            enterprise-grade applications with confidence.
+            I focus on practical, project-driven training that emphasizes clean architecture, testable and maintainable
+            code, and production-ready practices. I mentor students through capstone projects, code reviews, and mock
+            interviews to improve job-readiness and confidence. Available for corporate workshops and one-on-one
+            mentoring.
+            <br> Specialties:
+            Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • Android Development • Technical
+            Mentorship • Corporate Training & Bootcamps • End-to-End Development
+          </p>
           <div class="d-flex gap-2">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal">Register for Course</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal">Register for
+              Course</button>
             <a href="contact.html" class="btn btn-outline-primary">Contact</a>
           </div>
         </div>
@@ -259,7 +348,8 @@ Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • A
         <div class="col-md-6">
           <div class="card p-4">
             <h5>Get in touch</h5>
-            <p class="text-muted">Have questions or want to enroll? Reach out and we'll respond within one business day.</p>
+            <p class="text-muted">Have questions or want to enroll? Reach out and we'll respond within one business day.
+            </p>
             <p class="mb-1"><i class="bi bi-envelope-fill"></i> <strong>Email:</strong> skillmatrixsinfo@gmail.com</p>
             <p class="mb-1"><i class="bi bi-telephone-fill"></i> <strong>Phone:</strong> +91 94921 95223</p>
             <p><i class="bi bi-geo-alt-fill"></i> Hyderabad, India</p>
@@ -269,15 +359,17 @@ Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • A
         <div class="col-md-6">
           <div class="card p-4">
             <h5>Payment Options</h5>
-            <p class="text-muted mb-2">Quick payments via popular UPI and bank transfer (details provided on request).</p>
+            <p class="text-muted mb-2">Quick payments via popular UPI and bank transfer (details provided on request).
+            </p>
             <ul class="list-unstyled mb-0">
-              <li><strong>UPI (GPay/PhonePe/Paytm):</strong> <code>rajashekar130890@okhdfcbank/ rajashekar1308@ibl</code></li>
+              <li><strong>UPI (GPay/PhonePe/Paytm):</strong>
+                <code>rajashekar130890@okhdfcbank/ rajashekar1308@ibl</code></li>
               <li class="mt-2"><strong>Bank Transfer:</strong> SkillMatrixs Training Services</li>
             </ul>
             <div class="mt-3">
-             <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#upiQrModal">
-  Show UPI QR
-</button>
+              <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#upiQrModal">
+                Show UPI QR
+              </button>
               <button class="btn btn-primary btn-sm ms-2">Request Invoice</button>
             </div>
           </div>
@@ -286,49 +378,44 @@ Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • A
     </div>
   </section>
 
-<!-- UPI QR Modal -->
-<div class="modal fade" id="upiQrModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content upi-qr-animated">
+  <!-- UPI QR Modal -->
+  <div class="modal fade" id="upiQrModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content upi-qr-animated">
 
-      <div class="modal-header border-0">
-        <h5 class="modal-title fw-bold">Scan & Pay (UPI QR)</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold">Scan & Pay (UPI QR)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body text-center">
+          <!-- QR IMAGE -->
+          <img id="upiQrImage" src="/images/qrcode.jpg" alt="UPI QR Code"
+            class="img-fluid rounded shadow-lg upi-qr-zoom" style="max-width: 260px;">
+
+          <p class="mt-3 text-muted small">
+            Scan using <strong>GPay / PhonePe / Paytm</strong> to complete payment.
+          </p>
+
+          <!-- Copy UPI ID -->
+          <button class="btn btn-primary btn-sm mt-2" id="copyUpiBtn">
+            <i class="bi bi-clipboard-check"></i> Copy UPI ID
+          </button>
+
+          <!-- Download QR -->
+          <a class="btn btn-outline-primary btn-sm mt-2" id="downloadQrBtn" href="/images/qrcode.jpg"
+            download="SkillMatrixs-UPI-QR.png">
+            <i class="bi bi-download"></i> Download QR
+          </a>
+        </div>
+
+        <div class="modal-footer border-0">
+          <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+
       </div>
-
-      <div class="modal-body text-center">
-        <!-- QR IMAGE -->
-        <img id="upiQrImage"
-             src="/images/qrcode.jpg"
-             alt="UPI QR Code"
-             class="img-fluid rounded shadow-lg upi-qr-zoom"
-             style="max-width: 260px;">
-
-        <p class="mt-3 text-muted small">
-          Scan using <strong>GPay / PhonePe / Paytm</strong> to complete payment.
-        </p>
-
-        <!-- Copy UPI ID -->
-        <button class="btn btn-primary btn-sm mt-2" id="copyUpiBtn">
-          <i class="bi bi-clipboard-check"></i> Copy UPI ID
-        </button>
-
-        <!-- Download QR -->
-        <a class="btn btn-outline-primary btn-sm mt-2"
-           id="downloadQrBtn"
-           href="/images/qrcode.jpg"
-           download="SkillMatrixs-UPI-QR.png">
-          <i class="bi bi-download"></i> Download QR
-        </a>
-      </div>
-
-      <div class="modal-footer border-0">
-        <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-      </div>
-
     </div>
   </div>
-</div>
 
 
   <!-- FOOTER -->
@@ -368,7 +455,8 @@ Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • A
 
             <div class="mb-3">
               <label for="studentPhone" class="form-label">Phone <span class="text-danger">*</span></label>
-              <input type="tel" class="form-control" id="studentPhone" name="studentPhone" pattern="[\d\s+()-]{6,20}" required maxlength="20" />
+              <input type="tel" class="form-control" id="studentPhone" name="studentPhone" pattern="[\d\s+()-]{6,20}"
+                required maxlength="20" />
               <div class="invalid-feedback">Please enter your phone number.</div>
             </div>
 
@@ -386,7 +474,8 @@ Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • A
 
             <div class="mb-3">
               <label for="studentMessage" class="form-label">Message (optional)</label>
-              <textarea id="studentMessage" name="studentMessage" class="form-control" rows="3" maxlength="800"></textarea>
+              <textarea id="studentMessage" name="studentMessage" class="form-control" rows="3"
+                maxlength="800"></textarea>
             </div>
 
             <div id="googleFormFieldsContainer"></div>
@@ -405,24 +494,57 @@ Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • A
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  // Copy UPI ID
-  document.getElementById("copyUpiBtn").addEventListener("click", function () {
-    const upiId = "rajashekar130890@okhdfcbank"; // 🔥 replace with your actual UPI ID
+  <script>
+    // Copy UPI ID
+    document.getElementById("copyUpiBtn").addEventListener("click", function () {
+      const upiId = "rajashekar130890@okhdfcbank"; // 🔥 replace with your actual UPI ID
 
-    navigator.clipboard.writeText(upiId).then(() => {
-      this.innerHTML = '<i class="bi bi-check2-circle"></i> Copied!';
-      this.classList.remove("btn-primary");
-      this.classList.add("btn-success");
+      navigator.clipboard.writeText(upiId).then(() => {
+        this.innerHTML = '<i class="bi bi-check2-circle"></i> Copied!';
+        this.classList.remove("btn-primary");
+        this.classList.add("btn-success");
 
-      setTimeout(() => {
-        this.innerHTML = '<i class="bi bi-clipboard-check"></i> Copy UPI ID';
-        this.classList.remove("btn-success");
-        this.classList.add("btn-primary");
-      }, 1800);
+        setTimeout(() => {
+          this.innerHTML = '<i class="bi bi-clipboard-check"></i> Copy UPI ID';
+          this.classList.remove("btn-success");
+          this.classList.add("btn-primary");
+        }, 1800);
+      });
     });
-  });
-</script>
+  </script>
+  <script>
+    (function () {
+      const toggler = document.querySelector('.social-toggler');
+      const social = document.getElementById('topSocialCollapse');
+
+      function hideMobileSocial() {
+        social.classList.remove('show-mobile');
+      }
+      function showMobileSocial() {
+        social.classList.add('show-mobile');
+      }
+
+      if (toggler && social) {
+        toggler.addEventListener('click', function () {
+          if (social.classList.contains('show-mobile')) {
+            hideMobileSocial();
+            toggler.setAttribute('aria-expanded', 'false');
+          } else {
+            showMobileSocial();
+            toggler.setAttribute('aria-expanded', 'true');
+          }
+        });
+
+        // close when clicking outside
+        document.addEventListener('click', function (e) {
+          if (!toggler.contains(e.target) && !social.contains(e.target)) {
+            hideMobileSocial();
+            toggler.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    })();
+  </script>
 
   <script>
     // Init AOS
@@ -545,7 +667,7 @@ Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • A
     })();
 
     // AOS fallback if not loaded: apply small intersection observer transitions
-    (function(){
+    (function () {
       if (window.AOS) return;
       const elems = document.querySelectorAll('[data-aos]');
       elems.forEach(el => el.classList.add('aos-fallback'));
@@ -557,7 +679,7 @@ Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • A
               observer.unobserve(entry.target);
             }
           });
-        }, {threshold: 0.12});
+        }, { threshold: 0.12 });
         elems.forEach(e => obs.observe(e));
       } else {
         elems.forEach(e => e.classList.add('in-view'));
@@ -566,16 +688,16 @@ Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • A
   </script>
 
   <script>
-/*
-  Copy-Paste Deterrent (unchanged)
-*/
-(function () {
-  const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-  const modKey = isMac ? 'metaKey' : 'ctrlKey';
+    /*
+      Copy-Paste Deterrent (unchanged)
+    */
+    (function () {
+      const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+      const modKey = isMac ? 'metaKey' : 'ctrlKey';
 
-  const style = document.createElement('style');
-  style.id = 'no-select-style';
-  style.innerHTML = `
+      const style = document.createElement('style');
+      style.id = 'no-select-style';
+      style.innerHTML = `
     body *:not(input):not(textarea):not([contenteditable="true"]) {
       -webkit-user-select: none !important;
       -moz-user-select: none !important;
@@ -585,59 +707,59 @@ Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • A
     input, textarea, [contenteditable="true"] { user-select: text !important; }
     body *:not(input):not(textarea):not([contenteditable="true"]) { cursor: default; }
   `;
-  document.head.appendChild(style);
+      document.head.appendChild(style);
 
-  function isEditableTarget(el) {
-    if (!el) return false;
-    const tag = el.tagName && el.tagName.toLowerCase();
-    if (tag === 'input' || tag === 'textarea' || el.isContentEditable) return true;
-    if (el.closest && el.closest('input,textarea,[contenteditable="true"],[data-allow-copy]')) return true;
-    return false;
-  }
-
-  window.addEventListener('contextmenu', function (e) {
-    if (isEditableTarget(e.target)) return;
-    e.preventDefault();
-  }, { passive: false });
-
-  window.addEventListener('keydown', function (e) {
-    if (isEditableTarget(e.target)) return;
-    if (e[modKey]) {
-      const key = e.key.toLowerCase();
-      const blocked = ['c','x','v','a','u','s'];
-      if (blocked.includes(key)) {
-        e.preventDefault(); e.stopPropagation(); return;
+      function isEditableTarget(el) {
+        if (!el) return false;
+        const tag = el.tagName && el.tagName.toLowerCase();
+        if (tag === 'input' || tag === 'textarea' || el.isContentEditable) return true;
+        if (el.closest && el.closest('input,textarea,[contenteditable="true"],[data-allow-copy]')) return true;
+        return false;
       }
-      if (e.shiftKey && key === 'i') { e.preventDefault(); e.stopPropagation(); return; }
-    }
-    if (e.key === 'F12') { e.preventDefault(); e.stopPropagation(); return; }
-  }, true);
 
-  ['copy','cut','paste'].forEach(evtName => {
-    document.addEventListener(evtName, function (e) {
-      if (isEditableTarget(e.target)) return;
-      e.preventDefault(); e.stopPropagation();
-      if (evtName === 'copy' && e.clipboardData) {
-        const msg = 'Copying content from this site is restricted.';
-        try { e.clipboardData.setData('text/plain', msg); } catch (err) {}
-      }
-    }, true);
-  });
+      window.addEventListener('contextmenu', function (e) {
+        if (isEditableTarget(e.target)) return;
+        e.preventDefault();
+      }, { passive: false });
 
-  let protectionEnabled = true;
-  window.toggleCopyProtection = function (enable) {
-    if (typeof enable === 'boolean') protectionEnabled = enable;
-    if (protectionEnabled) {
-      if (!document.head.querySelector('#no-select-style')) document.head.appendChild(style);
-    } else {
-      const s = document.head.querySelector('#no-select-style');
-      if (s) s.remove();
-    }
-  };
-})();
-</script>
+      window.addEventListener('keydown', function (e) {
+        if (isEditableTarget(e.target)) return;
+        if (e[modKey]) {
+          const key = e.key.toLowerCase();
+          const blocked = ['c', 'x', 'v', 'a', 'u', 's'];
+          if (blocked.includes(key)) {
+            e.preventDefault(); e.stopPropagation(); return;
+          }
+          if (e.shiftKey && key === 'i') { e.preventDefault(); e.stopPropagation(); return; }
+        }
+        if (e.key === 'F12') { e.preventDefault(); e.stopPropagation(); return; }
+      }, true);
 
-<script type="application/ld+json">
+      ['copy', 'cut', 'paste'].forEach(evtName => {
+        document.addEventListener(evtName, function (e) {
+          if (isEditableTarget(e.target)) return;
+          e.preventDefault(); e.stopPropagation();
+          if (evtName === 'copy' && e.clipboardData) {
+            const msg = 'Copying content from this site is restricted.';
+            try { e.clipboardData.setData('text/plain', msg); } catch (err) { }
+          }
+        }, true);
+      });
+
+      let protectionEnabled = true;
+      window.toggleCopyProtection = function (enable) {
+        if (typeof enable === 'boolean') protectionEnabled = enable;
+        if (protectionEnabled) {
+          if (!document.head.querySelector('#no-select-style')) document.head.appendChild(style);
+        } else {
+          const s = document.head.querySelector('#no-select-style');
+          if (s) s.remove();
+        }
+      };
+    })();
+  </script>
+
+  <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"EducationalOrganization",
@@ -658,4 +780,5 @@ Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • A
 </script>
 
 </body>
+
 </html>
