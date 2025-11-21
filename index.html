@@ -275,7 +275,9 @@ Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • A
               <li class="mt-2"><strong>Bank Transfer:</strong> SkillMatrixs Training Services</li>
             </ul>
             <div class="mt-3">
-              <button class="btn btn-outline-primary btn-sm">Show UPI QR</button>
+             <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#upiQrModal">
+  Show UPI QR
+</button>
               <button class="btn btn-primary btn-sm ms-2">Request Invoice</button>
             </div>
           </div>
@@ -283,6 +285,51 @@ Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • A
       </div>
     </div>
   </section>
+
+<!-- UPI QR Modal -->
+<div class="modal fade" id="upiQrModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content upi-qr-animated">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold">Scan & Pay (UPI QR)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <!-- QR IMAGE -->
+        <img id="upiQrImage"
+             src="/images/qrcode.jpg"
+             alt="UPI QR Code"
+             class="img-fluid rounded shadow-lg upi-qr-zoom"
+             style="max-width: 260px;">
+
+        <p class="mt-3 text-muted small">
+          Scan using <strong>GPay / PhonePe / Paytm</strong> to complete payment.
+        </p>
+
+        <!-- Copy UPI ID -->
+        <button class="btn btn-primary btn-sm mt-2" id="copyUpiBtn">
+          <i class="bi bi-clipboard-check"></i> Copy UPI ID
+        </button>
+
+        <!-- Download QR -->
+        <a class="btn btn-outline-primary btn-sm mt-2"
+           id="downloadQrBtn"
+           href="/images/qrcode.jpg"
+           download="SkillMatrixs-UPI-QR.png">
+          <i class="bi bi-download"></i> Download QR
+        </a>
+      </div>
+
+      <div class="modal-footer border-0">
+        <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -358,6 +405,24 @@ Frontend Architecture • Microservices • Scalable App Design • SAPUI5 • A
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // Copy UPI ID
+  document.getElementById("copyUpiBtn").addEventListener("click", function () {
+    const upiId = "rajashekar130890@okhdfcbank"; // 🔥 replace with your actual UPI ID
+
+    navigator.clipboard.writeText(upiId).then(() => {
+      this.innerHTML = '<i class="bi bi-check2-circle"></i> Copied!';
+      this.classList.remove("btn-primary");
+      this.classList.add("btn-success");
+
+      setTimeout(() => {
+        this.innerHTML = '<i class="bi bi-clipboard-check"></i> Copy UPI ID';
+        this.classList.remove("btn-success");
+        this.classList.add("btn-primary");
+      }, 1800);
+    });
+  });
+</script>
 
   <script>
     // Init AOS
