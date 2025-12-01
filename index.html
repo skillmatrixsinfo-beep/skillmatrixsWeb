@@ -45,7 +45,15 @@
 
   </style>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PC92TDCFTG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-PC92TDCFTG');
+</script>
 <body>
   <!-- TOP SOCIAL BAR (place above the main navbar) -->
   <div class="top-bar d-flex align-items-center justify-content-between px-3">
@@ -432,7 +440,7 @@
   <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <form id="enrollForm" target="hidden_iframe" method="POST" action="GOOGLE_FORM_ACTION_URL" novalidate>
+        <form id="enrollForm" target="hidden_iframe" method="POST" action="https://docs.google.com/forms/d/1Hq5s5nrmX183almUVDXbcL3BryyD_ns_0DBIt43xHI8/formResponse" novalidate>
           <div class="modal-header">
             <h5 class="modal-title" id="enrollModalLabel">Course Enrollment — SkillMatrixs</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -563,16 +571,16 @@
     ========================= */
     (function () {
       // ======= CONFIGURE THIS =======
-      const GOOGLE_FORM_ACTION_URL = 'GOOGLE_FORM_ACTION_URL'; // e.g. https://docs.google.com/forms/d/e/FORM_ID/formResponse
+      const GOOGLE_FORM_ACTION_URL = 'https://docs.google.com/forms/d/1Hq5s5nrmX183almUVDXbcL3BryyD_ns_0DBIt43xHI8/formResponse'; // e.g. https://docs.google.com/forms/d/e/FORM_ID/formResponse
 
       // Map logical names to Google Form 'entry' field names.
       // Replace the entry.XXXXXXXX values with the actual entry ids from your form.
       const hiddenInputNames = {
-        name: 'entry.1111111111',
-        email: 'entry.2222222222',
-        phone: 'entry.3333333333',
-        course: 'entry.4444444444',
-        message: 'entry.5555555555'
+        name: 'entry.305043635',
+        email: 'entry.30963158',
+        phone: 'entry.1779613681',
+        course: 'entry.1975199676',
+        message: 'entry.1857958191'
       };
       // ======= END CONFIG =======
 
@@ -582,7 +590,7 @@
       const submitBtn = document.getElementById('submitEnrollBtn');
 
       // Set form action if configured
-      if (GOOGLE_FORM_ACTION_URL && GOOGLE_FORM_ACTION_URL !== 'GOOGLE_FORM_ACTION_URL') {
+      if (GOOGLE_FORM_ACTION_URL && GOOGLE_FORM_ACTION_URL !== 'https://docs.google.com/forms/d/1Hq5s5nrmX183almUVDXbcL3BryyD_ns_0DBIt43xHI8/formResponse') {
         enrollForm.action = GOOGLE_FORM_ACTION_URL;
       } else {
         console.warn('Reminder: replace GOOGLE_FORM_ACTION_URL with your Google Form action URL.');
@@ -660,7 +668,7 @@
       // Dev-time reminder if placeholders remain
       (function devCheck() {
         const missingEntry = Object.values(hiddenInputNames).some(v => typeof v === 'string' && v.startsWith('entry.') && v.length < 12);
-        if (missingEntry || GOOGLE_FORM_ACTION_URL === 'GOOGLE_FORM_ACTION_URL') {
+        if (missingEntry || GOOGLE_FORM_ACTION_URL === 'https://docs.google.com/forms/d/1Hq5s5nrmX183almUVDXbcL3BryyD_ns_0DBIt43xHI8/formResponse') {
           console.info('Reminder: Replace GOOGLE_FORM_ACTION_URL and the entry IDs in the enrollment script with your Google Form values.');
         }
       })();

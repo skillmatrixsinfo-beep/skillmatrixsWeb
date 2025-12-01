@@ -171,7 +171,7 @@
   <div class="modal fade" id="enrollModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content p-2">
-        <form id="enrollForm" target="hidden_iframe" method="POST" action="GOOGLE_FORM_ACTION_URL" novalidate>
+        <form id="enrollForm" target="hidden_iframe" method="POST" action="https://docs.google.com/forms/d/1Hq5s5nrmX183almUVDXbcL3BryyD_ns_0DBIt43xHI8/formResponse" novalidate>
           <div class="modal-header">
             <h5 class="modal-title">Enroll — Quick Request</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
@@ -228,6 +228,146 @@
         });
       }
       search.addEventListener('input', ()=> apply(search.value));
+    })();
+  </script>
+  <script>
+    // Init AOS
+    if (window.AOS) {
+      AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 80 });
+    }
+
+    // Dynamic copyright year
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+    /* =========================
+       Enrollment: Google Form submission via hidden iframe
+       Replace the placeholders below with your Google Form info.
+       1) GOOGLE_FORM_ACTION_URL -> your form's action URL (ends with /formResponse)
+       2) Replace each entry.XXXXXXXX ID with your form field entry IDs.
+    ========================= */
+    (function () {
+      // ======= CONFIGURE THIS =======
+      const GOOGLE_FORM_ACTION_URL = 'https://docs.google.com/forms/d/1Hq5s5nrmX183almUVDXbcL3BryyD_ns_0DBIt43xHI8/formResponse'; // e.g. https://docs.google.com/forms/d/e/FORM_ID/formResponse
+
+      // Map logical names to Google Form 'entry' field names.
+      // Replace the entry.XXXXXXXX values with the actual entry ids from your form.
+      const hiddenInputNames = {
+        name: 'entry.305043635',
+        email: 'entry.30963158',
+        phone: 'entry.1779613681',
+        course: 'entry.1975199676',
+        message: 'entry.1857958191'
+      };
+      // ======= END CONFIG =======
+
+      const enrollForm = document.getElementById('enrollForm');
+      const googleFieldsContainer = document.getElementById('googleFormFieldsContainer');
+      const enrollAlert = document.getElementById('enrollAlert');
+      const submitBtn = document.getElementById('submitEnrollBtn');
+
+      // Set form action if configured
+      if (GOOGLE_FORM_ACTION_URL && GOOGLE_FORM_ACTION_URL !== 'https://docs.google.com/forms/d/1Hq5s5nrmX183almUVDXbcL3BryyD_ns_0DBIt43xHI8/formResponse') {
+        enrollForm.action = GOOGLE_FORM_ACTION_URL;
+      } else {
+        console.warn('Reminder: replace GOOGLE_FORM_ACTION_URL with your Google Form action URL.');
+      }
+
+      // Create hidden inputs for Google Form fields
+      function createHiddenInputs() {
+        googleFieldsContainer.innerHTML = '';
+        for (const key in hiddenInputNames) {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = hiddenInputNames[key]; // name = entry.xxx
+          input.id = 'gf_' + key;
+          googleFieldsContainer.appendChild(input);
+        }
+      }
+      createHiddenInputs();
+
+      // Validate & submit handler
+      enrollForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        enrollAlert.classList.add('d-none');
+        enrollAlert.classList.remove('alert-success', 'alert-danger');
+
+        // bootstrap validation
+        if (!enrollForm.checkValidity()) {
+          enrollForm.classList.add('was-validated');
+          return;
+        }
+
+        // gather values
+        const values = {
+          name: document.getElementById('studentName').value.trim(),
+          email: document.getElementById('studentEmail').value.trim(),
+          phone: document.getElementById('studentPhone').value.trim(),
+          course: document.getElementById('studentCourse').value,
+          message: document.getElementById('studentMessage').value.trim()
+        };
+
+        // map to hidden inputs
+        for (const key in values) {
+          const hidden = document.getElementById('gf_' + key);
+          if (hidden) hidden.value = values[key];
+        }
+
+        // disable button while submitting
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Submitting...';
+
+        // Submit to Google Form via hidden iframe
+        enrollForm.submit();
+
+        // Show success message after short delay (iframe gives no reliable callback)
+        setTimeout(function () {
+          enrollAlert.classList.remove('d-none');
+          enrollAlert.classList.add('alert-success');
+          enrollAlert.innerHTML = 'Thank you! Your enrollment request has been submitted. We will contact you soon.';
+
+          enrollForm.reset();
+          enrollForm.classList.remove('was-validated');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Submit Enrollment';
+
+          // Close modal after a short pause
+          setTimeout(function () {
+            const modalEl = document.getElementById('enrollModal');
+            const modal = bootstrap.Modal.getInstance(modalEl);
+            if (modal) modal.hide();
+          }, 900);
+        }, 900);
+      });
+
+      // Dev-time reminder if placeholders remain
+      (function devCheck() {
+        const missingEntry = Object.values(hiddenInputNames).some(v => typeof v === 'string' && v.startsWith('entry.') && v.length < 12);
+        if (missingEntry || GOOGLE_FORM_ACTION_URL === 'https://docs.google.com/forms/d/1Hq5s5nrmX183almUVDXbcL3BryyD_ns_0DBIt43xHI8/formResponse') {
+          console.info('Reminder: Replace GOOGLE_FORM_ACTION_URL and the entry IDs in the enrollment script with your Google Form values.');
+        }
+      })();
+    })();
+
+    // AOS fallback if not loaded: apply small intersection observer transitions
+    (function () {
+      if (window.AOS) return;
+      const elems = document.querySelectorAll('[data-aos]');
+      elems.forEach(el => el.classList.add('aos-fallback'));
+      if ('IntersectionObserver' in window) {
+        const obs = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        elems.forEach(e => obs.observe(e));
+      } else {
+        elems.forEach(e => e.classList.add('in-view'));
+      }
     })();
   </script>
 </body>
