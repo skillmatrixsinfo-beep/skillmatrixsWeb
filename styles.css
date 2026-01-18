@@ -1,11 +1,10 @@
     :root {
-      --primary: #0b57b3;
-      --accent: #00b4d8;
-      --muted: #6c7a89;
-      --bg: #f7fbff;
-      --card-shadow: 0 12px 30px rgba(11, 99, 214, 0.06);
-      --glass: rgba(255,255,255,0.6);
-    }
+  --brand-primary: #0d6efd;   /* Tech Blue */
+  --brand-accent: #00e5ff;    /* Cyan */
+  --brand-dark: #0b132b;
+  --brand-light: #f8f9fa;
+  --card-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
     * { box-sizing: border-box; }
     body {
