@@ -1,0 +1,64 @@
+<!-- ENROLLMENT: modal + hidden iframe -->
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+  <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form id="enrollForm" target="hidden_iframe" method="POST" action="https://docs.google.com/forms/d/1Hq5s5nrmX183almUVDXbcL3BryyD_ns_0DBIt43xHI8/formResponse" novalidate>
+          <div class="modal-header">
+            <h5 class="modal-title" id="enrollModalLabel">Course Enrollment — SkillMatrixs</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <p class="small text-muted">Fill in the form below and we'll contact you with next steps.</p>
+
+            <div class="mb-3">
+              <label for="studentName" class="form-label">Full name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="studentName" name="studentName" required maxlength="100" />
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentEmail" class="form-label">Email <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="studentEmail" name="studentEmail" required maxlength="100" />
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentPhone" class="form-label">Phone <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="studentPhone" name="studentPhone" pattern="[\d\s+()-]{6,20}"
+                required maxlength="20" />
+              <div class="invalid-feedback">Please enter your phone number.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentCourse" class="form-label">Select Course <span class="text-danger">*</span></label>
+              <select id="studentCourse" name="studentCourse" class="form-select" required>
+                <option value="">Choose a course...</option>
+                <option>Full Stack Development with AI Skills</option>
+                <option>45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → Node.js → MySQL)</option>
+                <option>45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → SpringBoot → MySQL)</option>
+                <option>AI Skills</option>
+              </select>
+              <div class="invalid-feedback">Please select a course.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="studentMessage" class="form-label">Message (optional)</label>
+              <textarea id="studentMessage" name="studentMessage" class="form-control" rows="3"
+                maxlength="800"></textarea>
+            </div>
+
+            <div id="googleFormFieldsContainer"></div>
+            <div id="enrollAlert" class="alert d-none mt-2" role="alert"></div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button id="submitEnrollBtn" type="submit" class="btn btn-primary">Submit Enrollment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

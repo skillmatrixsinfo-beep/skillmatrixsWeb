@@ -3,205 +3,61 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Leadership — SkillMatrixs</title>
 
-   <!-- Favicon / App icons -->
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>Leadership — SkillMatrixs</title>
+  <meta name="description"
+    content="SkillMatrixs (Hyderabad) offers job-oriented Full Stack, Angular, Spring Boot, MySQL and AI training (Generative AI, RAG, Agents). Classroom & online cohorts in Miyapur, Kukatpally & Chandanagar — real projects, mentor-led, placement support.">
+  <meta name="keywords"
+    content="Full Stack Developer Course, Angular training Hyderabad, Spring Boot training, AI skills training, 45-day full stack, IT training institute Hyderabad, Full Stack training Miyapur, Angular classes Madinaguda">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://skillmatrixs.com/">
+
+  <!-- Favicon / App icons -->
   <link rel="icon" href="/images/logo.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/logo.png">
 
-  <!-- Bootstrap -->
+  <!-- Open Graph (social) -->
+  <meta property="og:site_name" content="SkillMatrixs">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SkillMatrixs — Full Stack, Angular, Spring Boot & AI Training in Hyderabad">
+  <meta property="og:description"
+    content="Job-oriented Full Stack, Angular, Spring Boot, MySQL and AI training with real projects. Offline & online cohorts in Miyapur, Kukatpally & Chandanagar — mentor-led, placement support.">
+  <meta property="og:image" content="https://skillmatrixs.com/assets/og-image.jpg">
+  <meta property="og:url" content="https://skillmatrixs.com/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SkillMatrixs">
+  <meta name="twitter:title" content="SkillMatrixs — Full Stack & AI Training, Hyderabad">
+  <meta name="twitter:description"
+    content="Join SkillMatrixs for practical Full Stack, Angular, Spring Boot and AI courses — real projects, live mentors and placement-focused training.">
+
+  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
   <style>
-    :root{
-      --primary:#0b57b3;
-      --accent:#00b4d8;
-      --bg:#f6f9ff;
-      --muted:#6c7a89;
-      --card-shadow: 0 12px 30px rgba(11,99,214,0.06);
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,Arial;
-      background:var(--bg);
-      color:#12263f;
-      -webkit-font-smoothing:antialiased;
-    }
 
-    /* Page hero */
-    .hero {
-      background: linear-gradient(135deg,#0b57b3,#00b4d8);
-      color:#fff;
-      padding:2.4rem 0;
-      border-bottom-left-radius:18px;
-      border-bottom-right-radius:18px;
-      margin-bottom:1.6rem;
-    }
-    .hero h1{ font-size:1.6rem; font-weight:800; margin-bottom:.25rem; }
-    .hero p.lead{ opacity:.95; margin-bottom:0; }
-
-    /* Leadership grid */
-    .leader-card{
-      background:#fff;
-      border-radius:12px;
-      overflow:hidden;
-      box-shadow:var(--card-shadow);
-      transition: transform .25s, box-shadow .25s;
-      display:flex;
-      flex-direction:column;
-      height:100%;
-    }
-    .leader-card:hover{ transform: translateY(-6px); box-shadow: 0 30px 60px rgba(10,30,90,0.08); }
-
-    .leader-photo{
-      width:100%;
-      height:260px;
-      object-fit:cover;
-      display:block;
-    }
-    .leader-body{
-      padding:1rem 1rem 1.25rem;
-      display:flex;
-      flex-direction:column;
-      gap:.6rem;
-      flex:1 1 auto;
-    }
-    .leader-name{ font-weight:800; color:var(--primary); margin-bottom:0; }
-    .leader-role{ color:var(--muted); font-weight:600; font-size:.95rem; }
-
-    .skills-list{ display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.5rem; }
-    .chip{ background:#f1f6ff; color:var(--primary); padding:.28rem .55rem; border-radius:999px; font-weight:600; font-size:.82rem; }
-
-    .contact-cta{ margin-top:1rem; display:flex; gap:.6rem; }
-
-    footer.site-footer{
-      background: linear-gradient(90deg,#042a5b,#062a4f);
-      color:#fff; padding:2rem 0; margin-top:2.2rem; text-align:center;
-      border-top-left-radius:8px; border-top-right-radius:8px;
-    }
-
-    @media (max-width:767px){
-      .leader-photo{ height:200px; }
-      .hero { text-align:center; }
-    }
   </style>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PC92TDCFTG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PC92TDCFTG');
+</script>
 <body>
 
-  <!-- TOP SOCIAL BAR (place above the main navbar) -->
-  <div class="top-bar d-flex align-items-center justify-content-between px-3">
-    <!-- LEFT: small brand logo -->
-    <div class="d-flex align-items-center">
-      <a href="index.html" class="d-flex align-items-center" aria-label="SkillMatrixs home">
-        <!-- USING uploaded navbar logo file (update path if you moved it to /images or /assets) -->
-        <!-- <img src="/images/logo.png" alt="SkillMatrixs" class="topbar-logo"> -->
-        <span class="ms-2 d-none d-md-inline site-name">SkillMatrixs</span>
-      </a>
-    </div>
+<div id="site-header"></div>
 
-    <!-- RIGHT: social icons + CTAs (collapsible on mobile) -->
-    <div class="d-flex align-items-center gap-2">
-      <!-- collapse toggler (visible on small screens) -->
-      <button class="social-toggler btn btn-sm btn-link d-md-none" aria-expanded="false"
-        aria-controls="topSocialCollapse" type="button">
-        <i class="bi bi-list"></i>
-      </button>
-
-      <!-- social + CTAs -->
-      <div id="topSocialCollapse" class="top-social d-none d-md-flex align-items-center gap-2">
-        <a class="top-social-link" href="https://www.instagram.com/skillmatrixs2610/" target="_blank" aria-label="Instagram">
-          <i class="bi bi-instagram"></i>
-        </a>
-        <a class="top-social-link" href="https://www.facebook.com/profile.php?id=61584035521310" target="_blank" aria-label="Facebook">
-          <i class="bi bi-facebook"></i>
-        </a>
-        <a class="top-social-link" href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-          <i class="bi bi-linkedin"></i>
-        </a>
-        <a class="top-social-link" href="https://www.youtube.com/@skillMatrixs" target="_blank"
-          aria-label="YouTube">
-          <i class="bi bi-youtube"></i>
-        </a>
-
-        <!-- Call Now -->
-        <a class="btn btn-call btn-sm ms-2" href="tel:+919492195223" aria-label="Call SkillMatrixs">Call Now</a>
-
-        <!-- WhatsApp Quick Chat (opens chat) -->
-        <a class="btn btn-whatsapp btn-sm ms-1"
-          href="https://wa.me/919492195223?text=Hi%20SkillMatrixs%2C%20I%27d%20like%20to%20enquire%20about%20courses"
-          target="_blank" aria-label="WhatsApp Chat">
-          <i class="bi bi-whatsapp"></i> WhatsApp
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Floating WhatsApp quick-chat button (bottom-right) -->
-  <a href="https://wa.me/919492195223?text=Hi%20SkillMatrixs%2C%20I%27d%20like%20to%20enquire%20about%20courses"
-    target="_blank" class="floating-whatsapp" aria-label="WhatsApp chat">
-    <i class="bi bi-whatsapp"></i>
-  </a>
-  
-  <!-- NAVBAR (professional feel + right-side actions) -->
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-    <div class="container">
-      <!-- logo + brand -->
-          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="SkillMatrixs homepage">
-      <img src="/images/logo.png" alt="SkillMatrixs logo" class="nav-logo" />
-      <!-- <span class="brand-text ms-2 d-none d-md-inline">SkillMatrixs</span> -->
-    </a>
-
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse"
-              aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              About
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-              <li><a class="dropdown-item" href="about.html">About SkillMatrixs</a></li>
-              <li><a class="dropdown-item" href="leadership.html">Leadership</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="our-story.html">Our Story</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item"><a class="nav-link" href="courses.html">Programs</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="services.html">Solutions</a></li>
-          <li class="nav-item"><a class="nav-link" href="staffing.html">Staffing</a></li> -->
-          <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Resources
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
-              <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
-              <li><a class="dropdown-item" href="blog.html">Blog</a></li>
-              <li><a class="dropdown-item" href="terms.html">Terms & Privacy</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <!-- right side actions -->
-        <div class="d-flex align-items-center gap-2 nav-actions">
-          <a id="lmsBtn" class="btn btn-lms btn-sm" href="#" role="button" title="Open LMS Portal">
-            <i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i> LMS Portal
-          </a>
-          <a class="btn btn-outline-light btn-sm" href="contact.html"><i class="bi bi-envelope-fill" aria-hidden="true"></i> Contact</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
+<main>
   <!-- HERO -->
   <header class="hero">
     <div class="container">
@@ -372,219 +228,12 @@
       </div>
     </div>
   </section>
+</main>
 
-   <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <p class="mb-1">© <span id="copyright-year"></span> SkillMatrixs — Where Creativity Meets Code.</p>
-      <small class="text-white-50">Designed with ♥ by Avinash Konduri</small>
-    </div>
-  </footer>
-
-  <!-- ENROLLMENT MODAL & hidden iframe (same pattern used on other pages) -->
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
-  <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <form id="enrollForm" target="hidden_iframe" method="POST" action="https://docs.google.com/forms/d/1Hq5s5nrmX183almUVDXbcL3BryyD_ns_0DBIt43xHI8/formResponse" novalidate>
-          <div class="modal-header">
-            <h5 class="modal-title" id="enrollModalLabel">Course Enrollment — SkillMatrixs</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-
-          <div class="modal-body">
-            <p class="small text-muted">Fill in the form below and we'll contact you with next steps.</p>
-
-            <div class="mb-3">
-              <label for="studentName" class="form-label">Full name <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="studentName" name="studentName" required maxlength="100" />
-              <div class="invalid-feedback">Please enter your name.</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="studentEmail" class="form-label">Email <span class="text-danger">*</span></label>
-              <input type="email" class="form-control" id="studentEmail" name="studentEmail" required maxlength="100" />
-              <div class="invalid-feedback">Please enter a valid email address.</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="studentPhone" class="form-label">Phone <span class="text-danger">*</span></label>
-              <input type="tel" class="form-control" id="studentPhone" name="studentPhone" pattern="[\d\s+()-]{6,20}" required maxlength="20" />
-              <div class="invalid-feedback">Please enter your phone number.</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="studentCourse" class="form-label">Select Course <span class="text-danger">*</span></label>
-              <select id="studentCourse" name="studentCourse" class="form-select" required>
-                <option value="">Choose a course...</option>
-                <option>Full Stack Development with AI Skills</option>
-                <option>45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → Node.js → MySQL)</option>
-                <option>45-Day Full-Stack Developer (HTML5 → CSS3 → JavaScript → Angular → SpringBoot → MySQL)</option>
-                <option>AI Skills</option>
-              </select>
-              <div class="invalid-feedback">Please select a course.</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="studentMessage" class="form-label">Message (optional)</label>
-              <textarea id="studentMessage" name="studentMessage" class="form-control" rows="3" maxlength="800"></textarea>
-            </div>
-
-            <div id="googleFormFieldsContainer"></div>
-            <div id="enrollAlert" class="alert d-none mt-2" role="alert"></div>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
-            <button id="submitEnrollBtn" type="submit" class="btn btn-primary">Submit Enrollment</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
- <script>
-    // Init AOS
-    if (window.AOS) {
-      AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 80 });
-    }
-
-    // Dynamic copyright year
-    document.getElementById('copyright-year').textContent = new Date().getFullYear();
-
-    /* =========================
-       Enrollment: Google Form submission via hidden iframe
-       Replace the placeholders below with your Google Form info.
-       1) GOOGLE_FORM_ACTION_URL -> your form's action URL (ends with /formResponse)
-       2) Replace each entry.XXXXXXXX ID with your form field entry IDs.
-    ========================= */
-    (function () {
-      // ======= CONFIGURE THIS =======
-      const GOOGLE_FORM_ACTION_URL = 'https://docs.google.com/forms/d/1Hq5s5nrmX183almUVDXbcL3BryyD_ns_0DBIt43xHI8/formResponse'; // e.g. https://docs.google.com/forms/d/e/FORM_ID/formResponse
-
-      // Map logical names to Google Form 'entry' field names.
-      // Replace the entry.XXXXXXXX values with the actual entry ids from your form.
-      const hiddenInputNames = {
-        name: 'entry.305043635',
-        email: 'entry.30963158',
-        phone: 'entry.1779613681',
-        course: 'entry.1975199676',
-        message: 'entry.1857958191'
-      };
-      // ======= END CONFIG =======
-
-      const enrollForm = document.getElementById('enrollForm');
-      const googleFieldsContainer = document.getElementById('googleFormFieldsContainer');
-      const enrollAlert = document.getElementById('enrollAlert');
-      const submitBtn = document.getElementById('submitEnrollBtn');
-
-      // Set form action if configured
-      if (GOOGLE_FORM_ACTION_URL && GOOGLE_FORM_ACTION_URL !== 'https://docs.google.com/forms/d/1Hq5s5nrmX183almUVDXbcL3BryyD_ns_0DBIt43xHI8/formResponse') {
-        enrollForm.action = GOOGLE_FORM_ACTION_URL;
-      } else {
-        console.warn('Reminder: replace GOOGLE_FORM_ACTION_URL with your Google Form action URL.');
-      }
-
-      // Create hidden inputs for Google Form fields
-      function createHiddenInputs() {
-        googleFieldsContainer.innerHTML = '';
-        for (const key in hiddenInputNames) {
-          const input = document.createElement('input');
-          input.type = 'hidden';
-          input.name = hiddenInputNames[key]; // name = entry.xxx
-          input.id = 'gf_' + key;
-          googleFieldsContainer.appendChild(input);
-        }
-      }
-      createHiddenInputs();
-
-      // Validate & submit handler
-      enrollForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        enrollAlert.classList.add('d-none');
-        enrollAlert.classList.remove('alert-success', 'alert-danger');
-
-        // bootstrap validation
-        if (!enrollForm.checkValidity()) {
-          enrollForm.classList.add('was-validated');
-          return;
-        }
-
-        // gather values
-        const values = {
-          name: document.getElementById('studentName').value.trim(),
-          email: document.getElementById('studentEmail').value.trim(),
-          phone: document.getElementById('studentPhone').value.trim(),
-          course: document.getElementById('studentCourse').value,
-          message: document.getElementById('studentMessage').value.trim()
-        };
-
-        // map to hidden inputs
-        for (const key in values) {
-          const hidden = document.getElementById('gf_' + key);
-          if (hidden) hidden.value = values[key];
-        }
-
-        // disable button while submitting
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = 'Submitting...';
-
-        // Submit to Google Form via hidden iframe
-        enrollForm.submit();
-
-        // Show success message after short delay (iframe gives no reliable callback)
-        setTimeout(function () {
-          enrollAlert.classList.remove('d-none');
-          enrollAlert.classList.add('alert-success');
-          enrollAlert.innerHTML = 'Thank you! Your enrollment request has been submitted. We will contact you soon.';
-
-          enrollForm.reset();
-          enrollForm.classList.remove('was-validated');
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = 'Submit Enrollment';
-
-          // Close modal after a short pause
-          setTimeout(function () {
-            const modalEl = document.getElementById('enrollModal');
-            const modal = bootstrap.Modal.getInstance(modalEl);
-            if (modal) modal.hide();
-          }, 900);
-        }, 900);
-      });
-
-      // Dev-time reminder if placeholders remain
-      (function devCheck() {
-        const missingEntry = Object.values(hiddenInputNames).some(v => typeof v === 'string' && v.startsWith('entry.') && v.length < 12);
-        if (missingEntry || GOOGLE_FORM_ACTION_URL === 'https://docs.google.com/forms/d/1Hq5s5nrmX183almUVDXbcL3BryyD_ns_0DBIt43xHI8/formResponse') {
-          console.info('Reminder: Replace GOOGLE_FORM_ACTION_URL and the entry IDs in the enrollment script with your Google Form values.');
-        }
-      })();
-    })();
-
-    // AOS fallback if not loaded: apply small intersection observer transitions
-    (function () {
-      if (window.AOS) return;
-      const elems = document.querySelectorAll('[data-aos]');
-      elems.forEach(el => el.classList.add('aos-fallback'));
-      if ('IntersectionObserver' in window) {
-        const obs = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('in-view');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.12 });
-        elems.forEach(e => obs.observe(e));
-      } else {
-        elems.forEach(e => e.classList.add('in-view'));
-      }
-    })();
-  </script>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="/assets/js/layout.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
